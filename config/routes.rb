@@ -4,6 +4,8 @@ IsotopeRails3::Application.routes.draw do
   root :to => 'home#index'
   match '/home/about' => 'home#about'
 
+  resources :pages, :controller => 'high_voltage/pages', :only => [:show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
