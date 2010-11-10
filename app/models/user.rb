@@ -1,10 +1,8 @@
 class User < ActiveRecord::Base
-  has_many :file_attachments
-  acts_as_authentic
-  acts_as_authorization_subject
-  acts_as_authorization_object
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable, :lockable and :timeoutable
+  devise :database_authenticatable, :rememberable, :lockable, :trackable, :validatable
 
-  def to_s
-    username
-  end
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
 end
