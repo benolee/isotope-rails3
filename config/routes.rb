@@ -2,6 +2,7 @@ IsotopeRails3::Application.routes.draw do
   devise_for :users
 
   root :to => 'home#index'
+  match '/home/about' => 'home#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
