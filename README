@@ -1,0 +1,10 @@
+This is the new isotope site rails 3 project.
+
+To get started:
+
+	Create a gemset  "rvm gemset create isotope-rails3"
+	Use the gemset   "rvm use 1.9.2@isotope-rails3"
+	Install bundler  "gem install bundler"
+	Run the bundle   "bundle install"
+	Create the database "rake db:create"
+	Run database migrations "rake db:migrate"
