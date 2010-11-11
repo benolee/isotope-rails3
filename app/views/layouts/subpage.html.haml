@@ -27,9 +27,7 @@
                 Isotope11
             #user_nav
               - if current_user
-                = link_to "My Account", user_path(current_user)
-                = link_to "Logout", logout_path
-                = link_to "New User", new_user_path
+                = link_to "Logout", destroy_user_session_path
               - else
                 = link_to "Login", new_user_session_path
             = render :partial => "shared/site_menu"
