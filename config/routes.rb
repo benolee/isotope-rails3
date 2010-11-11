@@ -1,16 +1,17 @@
 IsotopeRails3::Application.routes.draw do
-  resources :posts
+  root :to => 'home#index'
 
   devise_for :users
 
-  root :to => 'home#index'
+  resources :pages, :controller => 'high_voltage/pages', :only => [:show]
+  resources :posts
+
   match '/home/about' => 'home#about'
   match '/home/work' => 'home#work'
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
 
-  resources :pages, :controller => 'high_voltage/pages', :only => [:show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
