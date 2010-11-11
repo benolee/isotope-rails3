@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"
-      redirect_to root_url
+      redirect_to root_path
     else
       render :action => :edit
     end
