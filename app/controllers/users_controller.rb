@@ -9,9 +9,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration Successful!"
-      redirect_to root_url
+      redirect_to root_path
     else
-      render :action => :new
+      flash[:error] = "There was a problem creating the user."
+      redirect_to root_path
     end
   end
 
@@ -25,16 +26,17 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"
       redirect_to root_path
     else
-      render :action => :edit
+      flash[:error] = "There was a problem updating the user."
+      redirect_to root_path
     end
   end
 
