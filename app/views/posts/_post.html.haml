@@ -1,5 +1,6 @@
 = div_for post do
   %h2
     = link_to_unless_current h(post.title), post
+    = "by #{post.user}"
   = simple_format post.body
 
