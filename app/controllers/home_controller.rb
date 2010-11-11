@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def about
+    @users = User.all
     tab :about
   end
 
