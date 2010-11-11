@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   private
 
   def require_same_user
-    unless (current_user == User.find(params[:id])) || current_user.has_role?(:admin, @user)
+    unless (current_user == User.find(params[:id]))
       store_location
       flash[:notice] = "You do not have permission to access this page."
       redirect_to user_path(current_user)
