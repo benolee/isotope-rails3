@@ -1,106 +1,67 @@
 !!! Strict
-%html 
+%html
   %head
     %title
       Isotope11
-      = yield :title 
-    %meta{"content" => "2009-12-02T14:31:41-0600", "name" => "date"} 
-    %meta{"name" => "keywords", "content" => "Isotope, Isotope11, Isotope Eleven, internet, Laird Foret, software, custom software, Birmingham, custom software birmingham, alabama, custom development birmingham, consulting, Ruby development, Ruby on Rails development, rails development, linux, technology firm"} 
+      = yield :title
+    %meta{"content" => "2009-12-02T14:31:41-0600", "name" => "date"}
+    %meta{"name" => "keywords", "content" => "Isotope, Isotope11, Isotope Eleven, internet, Laird Foret, software, custom software, Birmingham, custom software birmingham, alabama, custom development birmingham, consulting, Ruby development, Ruby on Rails development, rails development, linux, technology firm"}
     %meta{"name" => "description", "content" => "Isotope11 specializes in custom software development on Linux based platforms using Ruby on Rails (RoR). Our expert skill sets also include e-commerce and financial applications, social networking applications, database architectures, graphic design, user interfaces and much more."}
     %meta{"content" => "text/html;charset=UTF-8", "http-equiv" => "content-type"}
-    %meta{"content" => "text/html; charset=UTF-8", "http-equiv" => "content-type"} 
-    = stylesheet_link_tag 'reset-min', 'screen' 
+    %meta{"content" => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
+    = stylesheet_link_tag 'reset-min', 'screen'
     = javascript_include_tag 'typeface-0.14.js'
     = javascript_include_tag 'greyscalebasic_regular.typeface.js'
-    %link{ :rel => 'shortcut icon", :href => "/favicon.ico?1234'} 
+    %link{ :rel => 'shortcut icon", :href => "/favicon.ico?1234'}
     %script{:type => "text/javascript", :charset => "utf-8"}
       var _siteRoot='index.html',_root='index.html';
     = javascript_include_tag 'jquery.js'
     = javascript_include_tag 'scripts.js'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
-    = javascript_include_tag 'scrollto.js' 
-    = javascript_include_tag 'localscroll.js' 
-    = javascript_include_tag 'serialscroll.js' 
+    = javascript_include_tag 'scrollto.js'
+    = javascript_include_tag 'localscroll.js'
+    = javascript_include_tag 'serialscroll.js'
 
   %body
     #main-wrap
-      #header 
+      #header
         #title-bar
           #top-bar
-            %h1
-              %a{ :href => "/"}
-                Isotope11
+            %h1= link_to 'Isotope11', root_path
             #user_nav
-              - if current_user 
-                = link_to "My Account", user_path(current_user) 
-                = link_to "Logout", logout_path  
-                - if current_user.has_role?(:admin, @user)
-                  = link_to "New User", new_user_path 
-              - else 
-                = link_to "Login", new_user_session_path
+              - if current_user
+                = link_to "Logout", destroy_user_session_path
+              - else
+                = link_to "Login", 'http://assets.isotope11.com'
             = render :partial => "shared/site_menu"
           #title
             %h2.typeface-js
               Web Development Done Right!
-            %h3 
-              We are a technology consulting firm which provides web based software development and design services. We believe in a team based, test driven, iterative development process which keeps our projects on target yet provides enough flexibility for the inevitable emerging requirements.
-      = yield 
+            %h3 We are a technology consulting firm which provides web based software development and design services. We believe in a team based, test driven, iterative development process which keeps our projects on target yet provides enough flexibility for the inevitable emerging requirements.
+      = yield
     #footer
       #footer-content-wrap
         %ul.footer-content
-          %li
-            Isotope 11
-          %li
-            529 Beacon Pkwy W
-          %li
-            Suite 105
-          %li
-            Birmingham, AL 35209
-          %li
-            p: 877.476.8671
-          %li
-            f: 205.943.5760
+          %li Isotope 11
+          %li -
+          %li 529 Beacon Pkwy W
+          %li -
+          %li Suite 105
+          %li -
+          %li Birmingham, AL 35209
+          %li -
+          %li p: 877.476.8671
+          %li -
+          %li f: 205.943.5760
+          %li -
           %li
             e:
             %a{ :href => "mailto:info@isotope11.com"}
               info@isotope11.com
-          %li
-            &nbsp;
-        %br
-        %ul.footer-content2
-          %li
-            %a{:href => "/"}
-              Home
-          %li
-            &ndash;
-          %li 
-            %a{:href => "/home/about"}
-              About
-          %li 
-            &ndash;
-          %li
-            %a{:href => "/home/work"}
-              Work
-          %li
-            &ndash;
-          %li
-            %a{:href => "/home/services"}
-              Services
-          %li
-            &ndash;
-          %li
-            %a{:href => "/home/contact"}
-              Contact
-          %li
-            &ndash;
-          %li
-            %a{:href => "/home/payments"}
-              Payments
-          %li
-            &ndash;
-          %li
-            %a{:href => "/home/careers"}
-              Careers
+          %li -
+          %li= link_to 'Make a Payment', '/home/payments'
+          %li -
+          %li= link_to "Site Login", new_user_session_path
     %script{:type => "text/javascript", :charset => "utf-8"} 
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

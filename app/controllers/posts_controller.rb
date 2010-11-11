@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  layout 'subpage'
+
   # GET /posts
   # GET /posts.xml
   def index
