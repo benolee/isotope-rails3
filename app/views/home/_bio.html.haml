@@ -1,0 +1,11 @@
+.profile
+  %h3
+    = bio.name
+  %h5
+    = bio.position
+  %p
+    = bio.bio
+.profile-pic
+  %img{ :src => "/images/about_#{bio.first_name}_#{bio.last_name}.png", :alt => "#{bio.name}"}
+%br
+ 
