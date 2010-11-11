@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :rememberable, :lockable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :bio, :position, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :bio, :position, :remember_me, :avatar
 
   # Paperclip
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }
 
   has_many :posts
 
