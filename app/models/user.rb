@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  def to_s
+    "#{first_name} #{middle_initial} #{last_name}"
+  end
+
 end
