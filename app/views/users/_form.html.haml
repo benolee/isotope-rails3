@@ -1,8 +1,27 @@
-= form.label :username
-= form.text_field :username
+= form_for @user, :html => { :multipart => true } do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2= pluralize(@user.errors.count, "error") + "prohibited this post from being saved:"
+      %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
 
-= form.label :password, form.object.new_record? ? nil : "Change password"
-= form.password_field :password
+  .field
+    = f.label :first_name
+    %br
+    = f.text_field :first_name
+  .field
+    = f.label :middle_initial
+    %br
+    = f.text_field :middle_initial
+  .field
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
+  .field
+    = f.label :avatar
+    %br
+    = f.file_field :avatar
+  .actions
+    = f.submit
 
-= form.label :password_confirmation
-= form.password_field :password_confirmation

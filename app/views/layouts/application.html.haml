@@ -30,6 +30,7 @@
             %h1= link_to 'Isotope11', root_path
             #user_nav
               - if current_user
+                = link_to 'Edit', edit_user_path(current_user)
                 = link_to "Logout", destroy_user_session_path
               - else
                 = link_to "Login", 'http://assets.isotope11.com'

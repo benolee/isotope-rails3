@@ -6,6 +6,6 @@
   %p
     = bio.bio
 .profile-pic
-  %img{ :src => "/images/about_#{bio.first_name}_#{bio.last_name}.png", :alt => "#{bio.name}"}
+  %img{ :src => "/images/about_#{bio.first_name.downcase}_#{bio.last_name.downcase}.png", :alt => "#{bio.name}"}
 %br
  
