@@ -1,0 +1,21 @@
+production
+  adapter: mysql
+  database: isotope_site_rails3_production
+  login: root
+  password: 
+
+development:
+  adapter: mysql
+  database: isotope_site_rails3_development
+  login: root
+  password: 
+
+test: &test
+  adapter: mysql
+  database: isotope_site_rails3_test
+  login: root
+  password: 
+
+cucumber:
+  <<: *test
+
