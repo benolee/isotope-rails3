@@ -1,0 +1,9 @@
+.title
+  %h2= link_to post.title, post_path(post)
+  %h4
+    posted on:
+    = post.created_at.to_date
+.body
+  %p= truncate(post.body, :length => 750)
+= link_to "read the rest", post_path(post)
+%br

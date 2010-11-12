@@ -1,0 +1,6 @@
+= render :partial => "home/bio", :locals => { :bio => @user }
+
+.clear
+%h2 render @posts 
+
+= render :partial => "post", :collection => @user.posts
