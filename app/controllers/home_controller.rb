@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def about
+    @users = User.all
     tab :about
   end
 
@@ -67,13 +68,13 @@ class HomeController < ApplicationController
   end
 
   def work_political_inquirer
-  end 
+  end
 
   def work_sportgraphics
   end
 
   def careers
-  end  
+  end
 
 end
 

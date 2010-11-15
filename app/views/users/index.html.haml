@@ -1,4 +1,7 @@
-- if current_user.has_role?(:admin, @file_attachment)
-  %h2 Client List
+- if current_user
+  %h2 User List
   - @users.each do |user|
-    %li= link_to user.username, user_path(user)
+    %div
+      .profile-pic
+        = link_to image_tag("/images/about_#{user.first_name}_#{user.last_name}.png"), user_path(user)
+        %p= user.name

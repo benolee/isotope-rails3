@@ -1,5 +1,8 @@
 .bundle
 db/*.sqlite3
 log/*.log
+config/database.yml
 tmp/**/*
 *.swp
+*.DS_Store
+public/system/**/*
