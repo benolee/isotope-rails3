@@ -33,6 +33,9 @@
       = f.password_field :password_confirmation
   - if @user.created_at?
     .field
+      %p Current Avatar:
+      %p= image_tag @user.avatar.url
+    .field
       = f.label :avatar
       = f.file_field :avatar
   - if current_user.admin?
