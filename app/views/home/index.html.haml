@@ -3,23 +3,39 @@
 #content-wrap
   #content-home
     #project-slider
-      #header-slide
-        .wrap
-          #slide-holder
-            #slide-runner
-              %a{:href => "/home/work_financial"}
-                %img{:id => "slide-img-1", :src => "images/fader-1.jpg", :class => "slide", :alt => ""}
-              %a{:href => "/home/work_aiua"}
-                %img{:id => "slide-img-3", :src => "images/fader-3.jpg", :class => "slide", :alt => ""}
-              %a{:href => "/home/work_sportgraphics"}
-                %img{:id => "slide-img-4", :src => "images/fader-4.jpg", :class => "slide", :alt => ""}
-              #slide-controls
-                %p{:id => "slide-client", :class => "text"}
-                  %strong
-                    Client:&nbsp;
-                    %span
-                %p{:id => "slide-desc", :class => "text"}
-                %p{:id => "slide-nav"}
+      .feature-wrap
+        .feature
+          .feature_title
+            %h3 MLM
+            = image_tag 'feature_mlm.png'
+          %p
+            Lorem mammasay mammasa mamma oo sa dolizzle shiz pot, dope adipiscing elizzle. Nullizzle bow wow wow boom shackalack, things pizzle, suscipizzle we gonna chung, gravida vizzle, arcu. Pellentesque get down get down tortor.
+          %p 
+            Sed fizzle. Go to hizzle izzle dolor dapibus uhuh ... yih! fo shizzle break it down. Boofron crazy pot izzle turpizzle. 
+        .feature
+          .feature_title
+            %h3 Ecommerce
+            = image_tag 'feature_ecom.png'
+          %p
+            Lorem mammasay mammasa mamma oo sa dolizzle shiz pot, dope adipiscing elizzle. 
+            %a{:href => "/"}
+              Nullizzle bow wow wow boom shackalack, 
+            things pizzle, suscipizzle we gonna chung, gravida vizzle, arcu. Pellentesque get down get down tortor. Sed fizzle. Go to hizzle izzle dolor dapibus uhuh ... yih! fo shizzle break it down. Boofron crazy pot izzle turpizzle. 
+        .feature
+          .feature_title
+            %h3 Social Media
+            = image_tag 'feature_social.png'
+          %p
+            Lorem mammasay mammasa mamma oo sa dolizzle shiz pot, dope adipiscing elizzle. Nullizzle bow wow wow boom shackalack, things pizzle, suscipizzle we gonna chung, 
+            %a{:href => "/"}
+              ravida vizzle, arcu. 
+            Pellentesque get down get down tortor. Sed fizzle. Go to hizzle izzle dolor dapibus uhuh ... yih! fo shizzle break it down. Boofron crazy pot izzle turpizzle. 
+        .feature-last
+          .feature_title
+            %h3 Feature 4
+            = image_tag 'feature_mlm.png'
+          %p
+            Lorem mammasay mammasa mamma oo sa dolizzle shiz pot, dope adipiscing elizzle. Nullizzle bow wow wow boom shackalack, things pizzle, suscipizzle we gonna chung, gravida vizzle, arcu. Pellentesque get down get down tortor. Sed fizzle. Go to hizzle izzle dolor dapibus uhuh ... yih! fo shizzle break it down. Boofron crazy pot izzle turpizzle. 
     <!--content featured gallery here -->
     <script type="text/javascript">
     if(!window.slider) var slider={};slider.data=[{"id":"slide-img-1","client":"Financial Services","desc":""},{"id":"slide-img-3","client":"AIUA","desc":""},{"id":"slide-img-4","client":"Sportgraphics","desc":""}];

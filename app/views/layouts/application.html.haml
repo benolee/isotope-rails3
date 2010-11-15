@@ -15,13 +15,8 @@
     %link{ :rel => 'shortcut icon", :href => "/favicon.ico?1234'}
     %script{:type => "text/javascript", :charset => "utf-8"}
       var _siteRoot='index.html',_root='index.html';
-    = javascript_include_tag 'jquery.js'
-    = javascript_include_tag 'scripts.js'
+    = javascript_include_tag 'jquery.js','unitpngfix.js'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
-    = javascript_include_tag 'scrollto.js'
-    = javascript_include_tag 'localscroll.js'
-    = javascript_include_tag 'serialscroll.js'
-
   %body
     #main-wrap
       #header
@@ -53,6 +48,53 @@
             e:
             %a{ :href => "mailto:info@isotope11.com"}
               info@isotope11.com
+          %li
+            &nbsp;
+        %br
+        %ul.footer-content2
+          %li
+            %a{:href => "/"}
+              Home
+          %li
+            &ndash;
+          %li 
+            %a{:href => "/home/about"}
+              About
+          %li 
+            &ndash;
+          %li
+            %a{:href => "/home/work"}
+              Work
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/services"}
+              Services
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/blog"}
+              Blog
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/contact"}
+              Contact
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/payments"}
+              Payments
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/careers"}
+              Careers
+          %li 
+            &ndash;
+          %li= link_to 'Make a Payment', '/home/payments'
+          %li 
+            &ndash;
           %li= link_to 'Make a Payment', '/home/payments'
           %li= link_to "Site Login", new_user_session_path
     %script{:type => "text/javascript", :charset => "utf-8"} 
