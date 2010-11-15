@@ -1,5 +1,6 @@
-%h1 Listing posts
+%h2 Listing posts
 
 = render @posts
+= will_paginate @posts
 
 = link_to 'New Post', new_post_path
