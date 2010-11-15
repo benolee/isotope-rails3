@@ -108,8 +108,12 @@ ul.nav li a {
   background:url(../images/blog.png) no-repeat 0 -45px;
   padding: 0 15px 0 0;
 }
-
-
+#blog_tab a:hover {
+   background:url(../images/blog.png) no-repeat 0 0;
+}
+#blog_tab.active {
+   background:url(../images/blog.png) no-repeat 0 0;
+}
 
 #clients_tab a {
   width:77px;

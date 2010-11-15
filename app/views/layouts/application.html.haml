@@ -15,12 +15,8 @@
     %link{ :rel => 'shortcut icon", :href => "/favicon.ico?1234'} 
     %script{:type => "text/javascript", :charset => "utf-8"}
       var _siteRoot='index.html',_root='index.html';
-    = javascript_include_tag 'jquery.js'
-    = javascript_include_tag 'scripts.js'
+    = javascript_include_tag 'jquery.js','unitpngfix.js'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
-    = javascript_include_tag 'scrollto.js' 
-    = javascript_include_tag 'localscroll.js' 
-    = javascript_include_tag 'serialscroll.js' 
 
   %body
     #main-wrap
@@ -86,6 +82,11 @@
           %li
             %a{:href => "/home/services"}
               Services
+          %li
+            &ndash;
+          %li
+            %a{:href => "/home/blog"}
+              Blog
           %li
             &ndash;
           %li
