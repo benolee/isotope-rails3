@@ -86,18 +86,17 @@ class PostsController < ApplicationController
     end
   end
 
+  ######################################################################
   private
+  ######################################################################
 
-    def authorized_user
-      post = Post.find(params[:id])
-      unless post.user == current_user || admin?
-        flash[:error] = 'You must be the creator or an admin to do that'
-        redirect_to root_path
-      end
+  def authorized_user
+    post = Post.find(params[:id])
+    unless post.user == current_user || admin?
+      flash[:error] = 'You must be the creator or an admin to do that'
+      redirect_to root_path
     end
-
-    def admin?
-      current_user.admin
-    end
+  end
 
 end
+
