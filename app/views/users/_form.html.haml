@@ -8,20 +8,37 @@
 
   .field
     = f.label :first_name
-    %br
     = f.text_field :first_name
   .field
     = f.label :middle_initial
-    %br
     = f.text_field :middle_initial
   .field
     = f.label :last_name
-    %br
     = f.text_field :last_name
   .field
-    = f.label :avatar
-    %br
-    = f.file_field :avatar
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :position
+    = f.text_field :position
+  .field
+    = f.label :bio
+    = f.text_field :bio
+  - if @user == current_user
+    .field
+      = f.label :password
+      = f.password_field :password
+    .field
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+  - if @user.created_at?
+    .field
+      = f.label :avatar
+      = f.file_field :avatar
+  - if current_user.admin?
+    .field
+      = f.label :locked
+      = f.check_box :locked
   .actions
     = f.submit
 

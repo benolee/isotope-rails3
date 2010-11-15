@@ -1,7 +1,16 @@
-- if current_user
-  %h2 User List
-  - @users.each do |user|
-    %div
-      .profile-pic
-        = link_to image_tag("/images/about_#{user.first_name}_#{user.last_name}.png"), user_path(user)
-        %p= user.name
+- content_for :title do 
+  About &ndash; Isotope11
+
+#internal-title	
+  %h2.typeface-js
+    About Us
+%p
+  Isotope11 is a software development firm which specializes in developing web based software applications. It was founded in 2005 and is primarily focused on developing software on Linux based platforms using Ruby on Rails (RoR). Our expert skill sets also include e-commerce, insurance and financial applications, social networking applications (facebook), database architectures, graphic design, user interfaces and much more.
+%p
+  Our clients range from small businesses to large financial firms, insurance companies as well as government agencies. We believe in transparent development and in keeping our clients informed about each project’s status. To that end, we employ many technologies to keep our client informed in near real-time and practice the AGILE methodology of development which includes constant communication and deliverables. We strive to build long term relationships and to deliver software on time and on target.
+%h2
+  Meet The Team
+
+- @users.each do |user|
+  = render :partial => 'bio', :locals => {:user => user}
+
