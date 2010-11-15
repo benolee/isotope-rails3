@@ -92,6 +92,7 @@
             &ndash;
           %li= link_to 'Make a Payment', '/home/payments'
           - if current_user
+            %li= link_to 'New Blog Post', new_post_path
             %li= link_to 'Edit Profile', edit_user_path(current_user)
             %li= link_to 'Site Logout', destroy_user_session_path
           - else
