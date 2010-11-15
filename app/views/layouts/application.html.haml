@@ -23,12 +23,7 @@
         #title-bar
           #top-bar
             %h1= link_to 'Isotope11', root_path
-            #user_nav
-              - if current_user
-                = link_to 'Edit', edit_user_path(current_user)
-                = link_to "Logout", destroy_user_session_path
-              - else
-                = link_to "Login", 'http://assets.isotope11.com'
+            #user_nav= link_to "Login", 'http://assets.isotope11.com'
             = render :partial => "shared/site_menu"
           #title
             %h2.typeface-js
@@ -96,7 +91,11 @@
           %li 
             &ndash;
           %li= link_to 'Make a Payment', '/home/payments'
-          %li= link_to "Site Login", new_user_session_path
+          - if current_user
+            %li= link_to 'Edit Profile', edit_user_path(current_user)
+            %li= link_to 'Site Logout', destroy_user_session_path
+          - else
+            %li= link_to "Site Login", new_user_session_path
     %script{:type => "text/javascript", :charset => "utf-8"} 
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
