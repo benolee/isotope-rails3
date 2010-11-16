@@ -30,6 +30,7 @@
               Web Development Done Right!
             %h3 We are a technology consulting firm which provides web based software development and design services. We believe in a team based, test driven, iterative development process which keeps our projects on target yet provides enough flexibility for the inevitable emerging requirements.
       = yield
+      %br.clear
     #footer
       #footer-content-wrap
         %ul.footer-content
@@ -45,7 +46,7 @@
               info@isotope11.com
           %li
             &nbsp;
-        %br
+        
         %ul.footer-content2
           %li
             %a{:href => "/"}
@@ -85,16 +86,13 @@
           %li
             %a{:href => "/home/careers"}
               Careers
-          %li 
-            &ndash;
-          %li= link_to 'Make a Payment', '/home/payments'
           - if current_user
             %li &ndash;
             %li= link_to 'New Blog Post', new_post_path
             %li &ndash;
             %li= link_to 'Edit Profile', edit_user_path(current_user)
             %li &ndash;
-            %li= link_to 'Site Logout', destroy_user_session_path
+            %li= link_to 'Logout', destroy_user_session_path
           - else
             %li &ndash;
             %li= link_to "Site Login", new_user_session_path
