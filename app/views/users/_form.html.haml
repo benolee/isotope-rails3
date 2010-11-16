@@ -23,7 +23,7 @@
     = f.text_field :position
   .field
     = f.label :bio
-    = f.text_field :bio
+    = f.text_area :bio
   - if @user == current_user || current_user.admin?
     .field
       = f.label :password
