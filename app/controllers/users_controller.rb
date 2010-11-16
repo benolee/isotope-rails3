@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration Successful!"
-      redirect_to edit_user_path(@user)
+      redirect_to about_path(@user)
     else
       flash[:error] = "There was a problem creating the user."
       render :new
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"
-      redirect_to user_path(@user)
+      redirect_to about_path(@user)
     else
       flash[:error] = "There was a problem updating the user."
       render :edit

@@ -36,4 +36,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def to_param
+    slug
+  end
+
 end
