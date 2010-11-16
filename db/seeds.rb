@@ -24,6 +24,11 @@ User.all.each do |user|
   user.update_attribute(:avatar, file)
 end
 
+["laird@isotope11.com", "josh@isotope11.com"].each do |email|
+  user = User.find_by_email(email)
+  user.make_admin!
+end
+
 if RAILS_ENV = "development"
   User.all.each do |user|
     Post.create( :title => "Post by: #{user}",  :body => "Vivamus nec mauris egizzle nisi shit pretizzle. Vivamus shut the shizzle up amet lacizzle. Ma nizzle eu pimpin' egizzle lacizzle auctizzle pizzle. Praesent fo shizzle boofron doggy. Curabitur izzle arcu. Own yo' ass enim, auctizzle owned, congue eu, dignissizzle black, libero. Bizzle vitae pede its fo rizzle eros posuere pharetra. Quisque pede tortizzle, gangster pulvinizzle, dope stuff, mollis fizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, erizzle. You son of a bizzle izzle dui. Aliquizzle doggy purus, black consectetizzle, sollicitudin i saw beyonces tizzles and my pizzle went crizzle, dope imperdiet, gangster. Quisque ipsizzle eu mi rutrum vehicula. Break it down things fizzle ipsum. Gangsta fo shizzle my nizzle morbi pizzle senectus izzle fizzle et malesuada shizznit daahng dawg turpis shit. In est. Curabitur elementizzle. Ut rizzle felizzle, da bomb quis, yo da bomb, sheezy pulvinizzle, its fo rizzle. Nulla sagittis gravida fo shizzle mah nizzle fo rizzle, mah home g-dizzle.",    :user => user)
