@@ -5,6 +5,8 @@ IsotopeRails3::Application.routes.draw do
 
   match '/about' => 'users#index', :as => :about
   match '/about/:id' => 'users#show', :as => :about
+  match '/blog' => 'posts#index', :as => :blog
+  match '/blog/:id' => 'posts#show', :as => :blog
   resources :users
   resources :posts
 
