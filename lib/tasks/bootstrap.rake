@@ -5,15 +5,15 @@ namespace :bootstrap do
 
   desc 'Create example posts - Users have to exists'
   task :create_posts => :environment do
-    Post.create( :title => "First Post", :body => "This is the first blog post by Laird Foret", :user => User.find_by_last_name("foret"), :slug => "first-post" )
-    Post.create( :title => "Second Post", :body => "This is the second blog post by Josh Adams", :user => User.find_by_last_name("adams"), :slug => "second-post" )
-    Post.create( :title => "Third Post", :body => "This is the third blog post by James Cook", :user => User.find_by_last_name("cook"), :slug => "third-post")
-    Post.create( :title => "Fourth Post", :body => "This is the fourth blog post by Nick Fine", :user => User.find_by_last_name("fine"), :slug => "fourth-post" )
-    Post.create( :title => "Fifth Post", :body => "This is the fifth blog post by Adam Dill", :user => User.find_by_last_name("dill"), :slug => "fifth-post" )
-    Post.create( :title => "Sixth Post", :body => "This is the sixth blog post by Robby Clements", :user => User.find_by_last_name("clements"), :slug => "sixth-post" )
-    Post.create( :title => "Seventh Post", :body => "This is the seventh blog post by Mike Heitzke", :user => User.find_by_last_name("heitzke"), :slug => "seventh-post" )
-    Post.create( :title => "Eighth Post", :body => "This is the eighth blog post by Adam Gamble", :user => User.find_by_last_name("gamble"), :slug => "eighth-post" )
-    Post.create( :title => "Ninth Post", :body => "This is the ninth blog post by Bradley Price", :user => User.find_by_last_name("price"), :slug => "ninth-post" )
+    Post.create( :title => "First Post", :body => "This is the first blog post by Laird Foret", :user => User.find_by_email("laird@isotope11.com"))
+    Post.create( :title => "Second Post", :body => "This is the second blog post by Josh Adams", :user => User.find_by_email("josh@isotope11.com"))
+    Post.create( :title => "Third Post", :body => "This is the third blog post by James Cook", :user => User.find_by_email("james@isotope11.com"))
+    Post.create( :title => "Fourth Post", :body => "This is the fourth blog post by Nick Fine", :user => User.find_by_email("nick@isotope11.com"))
+    Post.create( :title => "Fifth Post", :body => "This is the fifth blog post by Adam Dill", :user => User.find_by_email("adam@isotope11.com"))
+    Post.create( :title => "Sixth Post", :body => "This is the sixth blog post by Robby Clements", :user => User.find_by_email("rclements@isotope11.com"))
+    Post.create( :title => "Seventh Post", :body => "This is the seventh blog post by Mike Heitzke", :user => User.find_by_email("mike@isotope11.com"))
+    Post.create( :title => "Eighth Post", :body => "This is the eighth blog post by Adam Gamble", :user => User.find_by_email("agamble@isotope11.com"))
+    Post.create( :title => "Ninth Post", :body => "This is the ninth blog post by Bradley Price", :user => User.find_by_email("bradley@isotope11.com"))
   end
 
   desc 'Create users'

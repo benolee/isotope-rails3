@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration Successful!"
-      redirect_to edit_user_path(@user)
+      redirect_to about_path(@user)
     else
       flash[:error] = "There was a problem creating the user."
       render :new
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_slug(params[:id])
     if @user.locked_at?
       redirect_to root_url
     end
@@ -32,24 +32,28 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find_by_slug(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find_by_slug(params[:id])
 
-    if params[:user]["locked"] == "1" && !@user.locked_at?
-      @user.lock_access!
-    elsif params[:user]["locked"] == "0" && @user.locked_at?
-      @user.unlock_access!
+    if admin?
+      if params[:user]["locked"] == "true" && !@user.locked_at?
+        @user.lock_access!
+      elsif params[:user]["locked"] == "false" && @user.locked_at?
+        @user.unlock_access!
+      end
+    else
+      params[:user]["locked"].delete
     end
 
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"
-      redirect_to root_path
+      redirect_to about_path(@user)
     else
       flash[:error] = "There was a problem updating the user."
-      redirect_to root_path
+      render :edit
     end
   end
 end

@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }
 
   has_many :posts
+  validates_presence_of :slug, :first_name, :last_name
   validates_uniqueness_of :slug
-  validates_presence_of :slug
 
   before_validation_on_create :set_slug
 
@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
     unless slug
       self.slug = first_name.downcase + last_name.downcase
     end
+  end
+
+  def to_param
+    slug
   end
 
 end
