@@ -1,7 +1,6 @@
 = div_for post do
-  %h2= link_to_unless_current h(post.title), blog_path(post)
-  = image_tag post.user.avatar.url(:thumb)
-  %h3
-    = post.user
-  = simple_format post.body
+  %h3.post_title= link_to_unless_current h(post.title), blog_path(post)
+  %p.user_avatar= image_tag post.user.avatar.url(:thumb)
+  %h4= post.user
+  .post_body= post.body.html_safe
 
