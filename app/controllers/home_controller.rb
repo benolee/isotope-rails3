@@ -17,11 +17,12 @@ class HomeController < ApplicationController
   def contact
     tab :contact
     if request.post?
-      ContactFormEmail.create({:nickname => params[:user]["nickname"], :content => params[:text], :email => params[:user]["email"], :company => params[:company] })
-      UserMailer.deliver_contact_email(params[:user]["nickname"], params[:text], params[:user]["email"], params[:company])
-      flash.now[:notice] = "Email sent successfully."
-    else
-      flash.now[:error] = "There was a problem sending the email"
+      if @contact_form = ContactForm.create(params[:user])
+        ContactMailer.contact_email(@contact_form).deliver
+        flash.now[:notice] = "Email sent successfully."
+      else
+        flash.now[:error] = "There was a problem sending the email"
+      end
     end
   end
 
