@@ -274,6 +274,7 @@ ul.nav li a {
 #content a {
   color:#3d606f;
 }
+
 #content a:hover {
   color:#000066;
 }
@@ -490,6 +491,15 @@ hr {
 }
 
 /*--------------------------------------------blog----------------------------------------------*/
+
+.field label {
+  font-size:1.4em;
+}
+a.content_link {
+  font-size:1.4em;
+  margin: 20px 0 0 0;
+  display:block;
+}
 
 #blog_post {
   border-bottom:1px solid #ccc;
