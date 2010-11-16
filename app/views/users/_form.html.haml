@@ -40,8 +40,11 @@
       = f.file_field :avatar
   - if current_user.admin?
     .field
+      = f.label :lock_user
+      = f.radio_button(:locked, :false)
+      = f.label :unlocked
+      = f.radio_button(:locked, :true)
       = f.label :locked
-      = f.check_box :locked
   .actions
     = f.submit
 
