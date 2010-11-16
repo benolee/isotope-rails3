@@ -7,4 +7,4 @@
         by: 
         = post.user
     .blog_content
-      = simple_format post.body
+      = post.body.html_safe
