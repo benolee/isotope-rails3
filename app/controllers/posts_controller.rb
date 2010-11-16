@@ -3,8 +3,6 @@ class PostsController < ApplicationController
   before_filter :authorized_user, :only => [:edit, :update, :destroy]
   layout 'subpage'
 
-  # GET /posts
-  # GET /posts.xml
   def index
     @posts = Post.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
@@ -14,10 +12,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,8 +21,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.xml
   def new
     @post = Post.new
 
@@ -36,13 +30,10 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
-  # POST /posts
-  # POST /posts.xml
   def create
     @post = Post.new(params[:post])
     @post.user_id = current_user.id
@@ -58,10 +49,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.xml
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
@@ -74,15 +63,10 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.xml
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
+    @post = Post.find_by_slug(params[:id])
+    if @post.destroy
+      redirect_to(posts_url)
     end
   end
 
@@ -91,7 +75,7 @@ class PostsController < ApplicationController
   ######################################################################
 
   def authorized_user
-    post = Post.find(params[:id])
+    post = Post.find_by_slug(params[:id])
     unless post.user == current_user || admin?
       flash[:error] = 'You must be the creator or an admin to do that'
       redirect_to root_path

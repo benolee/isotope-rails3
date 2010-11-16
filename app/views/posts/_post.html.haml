@@ -6,5 +6,6 @@
       %h3
         by: 
         = post.user
+      %h4= post.created_at.to_formatted_s(:long_ordinal)
     .blog_content
-      = simple_format post.body
+      = post.body.html_safe
