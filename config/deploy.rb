@@ -50,22 +50,22 @@ end
 
 after 'deploy:update_code', 'deploy:symlink_shared'
 
-namespace :bundler do
-  desc "Symlink bundled gems on each release"
-  task :symlink_bundled_gems, :roles => :app do
-    run "mkdir -p #{shared_path}/bundled_gems"
-    run "ln -nfs #{shared_path}/bundled_gems #{release_path}/vendor/bundle"
-  end
-
-  desc "Install for production"
-  task :install, :roles => :app do
-    run "cd #{release_path} && bundle install"
-  end
-
-end
-
-after 'deploy:update_code', 'bundler:symlink_bundled_gems'
-after 'deploy:update_code', 'bundler:install'
+# namespace :bundler do
+#   desc "Symlink bundled gems on each release"
+#   task :symlink_bundled_gems, :roles => :app do
+#     run "mkdir -p #{shared_path}/bundled_gems"
+#     run "ln -nfs #{shared_path}/bundled_gems #{release_path}/vendor/bundle"
+#   end
+# 
+#   desc "Install for production"
+#   task :install, :roles => :app do
+#     run "cd #{release_path} && bundle install"
+#   end
+# 
+# end
+# 
+# after 'deploy:update_code', 'bundler:symlink_bundled_gems'
+# after 'deploy:update_code', 'bundler:install'
 
 
 
