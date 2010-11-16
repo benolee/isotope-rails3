@@ -23,6 +23,10 @@
             = render :partial => "shared/site_menu"
       #content-wrap
         #content
+          -if flash[:error]
+            .error= flash[:error]
+          -if flash[:notice]
+            .notice= flash[:notice]
           = yield
           .clear 
     = render :partial => "shared/footer"
