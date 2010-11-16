@@ -1,0 +1,66 @@
+#footer
+  #footer-content-wrap
+    %ul.footer-content
+      %li Isotope 11
+      %li 529 Beacon Pkwy W
+      %li Suite 105
+      %li Birmingham, AL 35209
+      %li p: 877.476.8671
+      %li f: 205.943.5760
+      %li
+        e:
+        %a{ :href => "mailto:info@isotope11.com"}
+          info@isotope11.com
+      %li
+        &nbsp;
+    
+    %ul.footer-content2
+      %li
+        %a{:href => "/"}
+          Home
+      %li
+        &ndash;
+      %li 
+        %a{:href => "/home/about"}
+          About
+      %li 
+        &ndash;
+      %li
+        %a{:href => "/home/work"}
+          Work
+      %li
+        &ndash;
+      %li
+        %a{:href => "/home/services"}
+          Services
+      %li
+        &ndash;
+      %li
+        %a{:href => "/home/blog"}
+          Blog
+      %li
+        &ndash;
+      %li
+        %a{:href => "/home/contact"}
+          Contact
+      %li
+        &ndash;
+      %li
+        %a{:href => "/home/payments"}
+          Payments
+      %li
+        &ndash;
+      %li
+        %a{:href => "/home/careers"}
+          Careers
+      - if current_user
+        %li &ndash;
+        %li= link_to 'New Blog Post', new_post_path
+        %li &ndash;
+        %li= link_to 'Edit Profile', edit_user_path(current_user)
+        %li &ndash;
+        %li= link_to 'Logout', destroy_user_session_path
+      - else
+        %li &ndash;
+        %li= link_to "Site Login", new_user_session_path
+
