@@ -39,7 +39,7 @@ h1 a:hover {background:url(../images/logo.png) 0 -126px no-repeat; width:262px; 
 /*----------------------------------------------------------------------------navigation-----------------------------*/
 
 #navigation {
-  padding: 30px 0 0 0; 
+  padding: 27px 0 0 0; 
   float:right;
 }
 
@@ -62,7 +62,7 @@ ul.nav li a {
 #home_tab a {
   width:74px; 
   background:url(../images/home.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0; 
+  padding: 0 12px 0 0; 
 }
 #home_tab a:hover {
   background:url(../images/home.png) no-repeat 0 0;
@@ -71,7 +71,7 @@ ul.nav li a {
 #about_tab a {
   width:74px; 
   background:url(../images/about.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0; 
+  padding: 0 12px 0 0; 
 }
 #about_tab a:hover {
   background:url(../images/about.png) no-repeat 0 0;
@@ -83,7 +83,7 @@ ul.nav li a {
 #work_tab a {
   width:69px;
   background:url(../images/work.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
 }
 #work_tab a:hover {
   background:url(../images/work.png) no-repeat 0 0;
@@ -95,7 +95,7 @@ ul.nav li a {
 #services_tab a {
   width:88px;
   background:url(../images/services.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
 }
 #services_tab a:hover {
   background:url(../images/services.png) no-repeat 0 0;
@@ -106,7 +106,7 @@ ul.nav li a {
 #blog_tab a {
   width:69px;
   background:url(../images/blog.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
 }
 #blog_tab a:hover {
    background:url(../images/blog.png) no-repeat 0 0;
@@ -118,7 +118,7 @@ ul.nav li a {
 #clients_tab a {
   width:77px;
   background:url(../images/clients.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
 }
 #clients_tab a:hover {
   background:url(../images/clients.png) no-repeat 0 0;
@@ -130,7 +130,7 @@ ul.nav li a {
 #contact_tab a {
   width:84px;
   background:url(../images/contact.png) no-repeat 0 -45px;
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
 }
 #contact_tab a:hover {
   background:url(../images/contact.png) no-repeat 0 0;
@@ -287,8 +287,15 @@ hr {color:#999999;}
 #footer .footer-content2 li a {color:#3d606f; text-transform:none;}
 #footer .footer-content2 li a:hover {color:#000066;}
 
-
-#footer .footer-content {float:left; margin: 0 50px 15px 131px; padding: 25px 0 0 0; color:#3d606f; font-size:1.1em;}
+#footer-content-wrap ul.footer-content {
+  float:left; 
+  margin: 0 50px 15px 131px; 
+  padding: 25px 0 0 0; 
+  color:#3d606f; 
+  font-size:1.1em;
+  width:250px;
+  height:auto;
+}
 #footer .footer-content li {padding: 0 5px 3px 0;}
 #footer .footer-content li a {color:#3d606f;}
 #footer .footer-content li a:hover {color:#000066;}
@@ -389,8 +396,6 @@ button:focus {
 	border: 3px double #003399;
 }
 
-
-
 /* @group quotes */
 
 blockquote {
@@ -400,13 +405,10 @@ blockquote {
 	margin-bottom: 0.6667em;	/* 12px */
 }
 
-
 blockquote p {
 	margin-top: 0.3333em;		/*  6px */
 	margin-bottom: 0.6667em;	/* 12px */
 }
-
-
 
 form blockquote {
 	font-style: normal;
@@ -537,11 +539,14 @@ background : url(images/nav.png) no-repeat;
 }
 
 #user_nav a {
-padding: 0 6px 0 0;
+padding: 4px 6px 0 0;
 margin: 0;
 float:right;
 font-size: 12px;
-color: #FFFFFF;
+color: #3c5f80;
+}
+#user_nav a:hover {
+  color:#709cc4;
 }
 
 #user_nav {
