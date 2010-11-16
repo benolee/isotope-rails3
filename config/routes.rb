@@ -4,10 +4,9 @@ IsotopeRails3::Application.routes.draw do
   devise_for :users, :path => '/', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
   resources :users
-  resources :pages, :controller => 'high_voltage/pages', :only => [:show]
+  match '/about' => 'users#index'
   resources :posts
 
-  match '/home/about' => 'home#about'
   match '/home/work' => 'home#work'
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'

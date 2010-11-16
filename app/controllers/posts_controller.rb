@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authorized_user, :only => [:edit, :update, :destroy]
   layout 'subpage'
 
   # GET /posts
@@ -27,7 +29,6 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
-    @post.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -83,4 +85,18 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  ######################################################################
+  private
+  ######################################################################
+
+  def authorized_user
+    post = Post.find(params[:id])
+    unless post.user == current_user || admin?
+      flash[:error] = 'You must be the creator or an admin to do that'
+      redirect_to root_path
+    end
+  end
+
 end
+

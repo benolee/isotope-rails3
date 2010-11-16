@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }
 
   has_many :posts
+  scope :unlocked, where('locked_at IS NULL')
 
   def to_s
     "#{first_name} #{middle_initial} #{last_name}"
@@ -18,6 +19,10 @@ class User < ActiveRecord::Base
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  def locked
+    locked_at?
   end
 
 end
