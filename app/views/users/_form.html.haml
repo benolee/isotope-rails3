@@ -24,7 +24,7 @@
   .field
     = f.label :bio
     = f.text_field :bio
-  - if @user == current_user
+  - if @user == current_user || current_user.admin?
     .field
       = f.label :password
       = f.password_field :password
@@ -38,7 +38,7 @@
     .field
       = f.label :avatar
       = f.file_field :avatar
-  - if current_user.admin?
+  - if current_user.admin? && @user.created_at?
     .field
       = f.label :lock_user
       = f.radio_button(:locked, :false)
