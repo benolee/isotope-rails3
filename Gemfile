@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'bundler', '~> 1.0.2'
 gem 'rails', '~> 3.0.0'
 gem 'mysql', '~> 2.8.1'
@@ -11,4 +10,5 @@ gem 'sass', '~> 3.1.0.alpha.24'
 gem 'will_paginate', '~> 3.0.pre2'
 
 group :test do
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
