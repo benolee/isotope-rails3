@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
 
   def set_slug
     unless slug
-      self.slug = first_name.downcase + last_name.downcase
+      self.slug = "#{first_name.downcase}-#{last_name.downcase}"
     end
   end
 
