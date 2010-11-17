@@ -13,46 +13,25 @@
           info@isotope11.com
       %li
         &nbsp;
-    
+
     %ul.footer-content2
       %li
         %a{:href => "/"}
           Home
-      %li
-        &ndash;
-      %li 
-        %a{:href => "/home/about"}
-          About
-      %li 
-        &ndash;
-      %li
-        %a{:href => "/home/work"}
-          Work
-      %li
-        &ndash;
-      %li
-        %a{:href => "/home/services"}
-          Services
-      %li
-        &ndash;
-      %li
-        %a{:href => "/home/blog"}
-          Blog
-      %li
-        &ndash;
-      %li
-        %a{:href => "/home/contact"}
-          Contact
-      %li
-        &ndash;
-      %li
-        %a{:href => "/home/payments"}
-          Payments
-      %li
-        &ndash;
-      %li
-        %a{:href => "/home/careers"}
-          Careers
+      %li &ndash;
+      %li= link_to 'About', '/about'
+      %li &ndash;
+      %li= link_to 'Work', '/work'
+      %li &ndash;
+      %li= link_to 'Services', '/home/services'
+      %li &ndash;
+      %li= link_to 'Blog', '/blog'
+      %li &ndash;
+      %li= link_to 'Contact', '/home/contact'
+      %li &ndash;
+      %li= link_to 'Payments', '/home/payments'
+      %li &ndash;
+      %li= link_to 'Careers', '/home/careers'
       - if current_user
         %li &ndash;
         %li= link_to 'New Blog Post', new_post_path

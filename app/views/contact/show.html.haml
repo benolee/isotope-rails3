@@ -1,0 +1,3 @@
+- form_for @contact do |f|
+  = render :partial => 'contact_form', :locals => { :f => f }
+  = button_to "Delete", options = { :action => 'destroy' , :id => @contact }, html_options = { :confirm => "Are you sure?", :method => :delete }

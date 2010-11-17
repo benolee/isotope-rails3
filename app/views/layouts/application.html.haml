@@ -5,27 +5,15 @@
       = yield :title
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
-    = render :partial => 'shared/javascripts'
-    %link{:rel => 'shortcut icon", :href => "/favicon.ico?1234'}
-  %body
+  %body.internal
     #main-wrap
-      #header
-        #title-bar
-          #top-bar
-            %h1= link_to 'Isotope11', root_path
-            #user_nav= link_to "Login", 'http://assets.isotope11.com'
-            = render :partial => "shared/site_menu"
-          #title
-            %h2.typeface-js
-              Web Development Done Right!
-            %h3 We are a technology consulting firm which provides web based software development and design services. We believe in a team based, test driven, iterative development process which keeps our projects on target yet provides enough flexibility for the inevitable emerging requirements.
-      = yield
-      %br.clear
-    = render :partial => "shared/footer" 
-    %script{:type => "text/javascript", :charset => "utf-8"} 
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      var _siteRoot='index.html',_root='index.html';
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    %script{:type => "text/javascript", :charset => "utf-8"}
-      try { var pageTracker = _gat._getTracker("UA-3168015-2");
-      pageTracker._trackPageview(); } catch(err) {}
+      #header-internal
+        #title-bar-internal
+          = render :partial => "shared/header"
+      #content-wrap
+        #content
+          = render :partial => "shared/flashes"
+          = yield
+          %br.clear 
+    = render :partial => "shared/footer"
+    = render :partial => 'shared/javascripts'
