@@ -1,7 +1,8 @@
 class ContactController < ApplicationController
+  before_filter :require_admin, :only => [:show, :edit]
 
   def index
-    if current_user && current_user.admin?
+    if admin?
       @contacts = Contact.all
     else
       @contact = Contact.new
@@ -9,11 +10,7 @@ class ContactController < ApplicationController
   end
 
   def show
-    if current_user && current_user.admin?
       @contact = Contact.find(params[:id])
-    else
-      redirect_to :action => 'index'
-    end
   end
 
   def create
@@ -27,7 +24,7 @@ class ContactController < ApplicationController
   end
 
   def edit
-    @contact = Contact.find(params[:id])
+      @contact = Contact.find(params[:id])
   end
 
   def update

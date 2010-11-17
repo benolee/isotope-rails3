@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   #######################################################################
 
   def admin?
-    current_user.admin
+    current_user && current_user.admin
   end
 
   def require_admin
