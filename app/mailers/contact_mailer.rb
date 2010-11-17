@@ -4,7 +4,7 @@ class ContactMailer < ActionMailer::Base
   def contact_email(contact_form)
     @contact_form = contact_form
     mail(
-      :to => ["josh@isotope11.com", "laird@isotope11.com"]
+      :to => ["josh@isotope11.com", "laird@isotope11.com"],
       :subject => "Somebody used the contact form!"
     )
   end
