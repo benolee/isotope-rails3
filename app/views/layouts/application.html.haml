@@ -5,19 +5,21 @@
       = yield :title
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
-  %body
+  %body.internal
     #main-wrap
-      #header
-        #title-bar
+      #header-internal
+        #title-bar-internal
           #top-bar
             %h1= link_to 'Isotope11', root_path
             #user_nav= link_to "Login", 'http://assets.isotope11.com'
             = render :partial => "shared/site_menu"
-          #title
-            %h2.typeface-js
-              Web Development Done Right!
-            %h3 We are a technology consulting firm which provides web based software development and design services. We believe in a team based, test driven, iterative development process which keeps our projects on target yet provides enough flexibility for the inevitable emerging requirements.
-      = yield
-      %br.clear
-    = render :partial => "shared/footer" 
+      #content-wrap
+        #content
+          -if flash[:error]
+            .error= flash[:error]
+          -if flash[:notice]
+            .notice= flash[:notice]
+          = yield
+          %br.clear 
+    = render :partial => "shared/footer"
   = render :partial => 'shared/javascripts'
