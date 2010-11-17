@@ -1,5 +1,4 @@
 class ContactController < ApplicationController
-  layout 'subpage'
 
   def index
     if current_user && current_user.admin?
