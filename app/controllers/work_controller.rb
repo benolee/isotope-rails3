@@ -1,6 +1,6 @@
 class WorkController < ApplicationController
 
-  def work
+  def index
     tab :work
   end
 
