@@ -27,7 +27,11 @@ class ContactController < ApplicationController
   end
 
   def edit
-    @contact = Contact.find(params[:id])
+    if current_user && current_user.admin?
+      @contact = Contact.find(params[:id])
+    else
+      redirect_to :action => 'index'
+    end
   end
 
   def update
