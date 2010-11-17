@@ -18,10 +18,10 @@ class ContactController < ApplicationController
 
   def create
     if @contact = Contact.create(params[:contact])
-      flash.now[:notice] = "Message successfully sent."
+      flash[:notice] = "Message successfully sent."
       redirect_to :action => 'index'
     else
-      flash.now[:error] = "There were problems sending the message."
+      flash[:error] = "There were problems sending the message."
       redirect_to :action => 'index'
     end
   end
