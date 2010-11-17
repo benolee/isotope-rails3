@@ -9,6 +9,7 @@ IsotopeRails3::Application.routes.draw do
   match '/blog/:id' => 'posts#show', :as => :blog
   resources :users
   resources :posts
+  resources :contact
 
   match 'work' => 'work'
   match '/work/acolleague' => 'work#acolleague'
