@@ -1,7 +1,8 @@
-= javascript_include_tag 'typeface-0.14.js', 'greyscalebasic_regular.typeface.js'
-= javascript_include_tag 'jquery.js','unitpngfix.js'
-= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
 = yield :javascripts
-
-
-
+%script{:type => "text/javascript", :charset => "utf-8"} 
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  var _siteRoot='index.html',_root='index.html';
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+%script{:type => "text/javascript", :charset => "utf-8"}
+  try { var pageTracker = _gat._getTracker("UA-3168015-2");
+  pageTracker._trackPageview(); } catch(err) {}
