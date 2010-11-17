@@ -46,4 +46,18 @@ IsotopeRails3::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+
+  # action_mailer settings
+  config.action_mailer.delivery_method = :sendmail
+
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #  :address      => "smtp.gmail.com",
+  #  :port         => 587,
+  #  :domain       => 'isotope11.com',
+  #  :user_name    => '<username>',
+  #  :password     => '<super_secret>',
+  #  :authentication => 'plain'
+  #}
 end

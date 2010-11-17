@@ -15,8 +15,7 @@ class ContactController < ApplicationController
 
   def create
     if @contact = Contact.create(params[:contact])
-      flash[:notice] = "Message successfully sent."
-      redirect_to :action => 'index'
+      render :action => 'thank_you'
     else
       flash[:error] = "There were problems sending the message."
       redirect_to :action => 'index'
@@ -36,6 +35,9 @@ class ContactController < ApplicationController
       flash[:error] = "There was a problem updating the message."
       redirect_to :action => 'index'
     end
+  end
+
+  def thank_you
   end
 
   def destroy
