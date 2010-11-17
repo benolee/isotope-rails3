@@ -5,21 +5,13 @@
       = yield :title
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
-    = render :partial => 'shared/javascripts'
-    %link{:rel => 'shortcut icon", :href => "/favicon.ico?1234'}
   %body.internal
     #main-wrap
       #header-internal
         #title-bar-internal
           #top-bar
-            %h1
-              %a{ :href => "/"}
-                Isotope11
-            #user_nav
-              - if current_user
-                = link_to "Logout", destroy_user_session_path
-              - else
-                = link_to "Login", new_user_session_path
+            %h1= link_to 'Isotope11', root_path
+            #user_nav= link_to "Login", 'http://assets.isotope11.com'
             = render :partial => "shared/site_menu"
       #content-wrap
         #content
@@ -28,12 +20,6 @@
           -if flash[:notice]
             .notice= flash[:notice]
           = yield
-          .clear 
+          %br.clear 
     = render :partial => "shared/footer"
-    %script{:type => "text/javascript", :charset => "utf-8"} 
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      var _siteRoot='index.html',_root='index.html';
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    %script{:type => "text/javascript", :charset => "utf-8"}
-      try { var pageTracker = _gat._getTracker("UA-3168015-2");
-      pageTracker._trackPageview(); } catch(err) {}
+  = render :partial => 'shared/javascripts'

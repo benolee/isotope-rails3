@@ -5,8 +5,6 @@
       = yield :title
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
-    = render :partial => 'shared/javascripts'
-    %link{:rel => 'shortcut icon", :href => "/favicon.ico?1234'}
   %body
     #main-wrap
       #header
@@ -22,10 +20,4 @@
       = yield
       %br.clear
     = render :partial => "shared/footer" 
-    %script{:type => "text/javascript", :charset => "utf-8"} 
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      var _siteRoot='index.html',_root='index.html';
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    %script{:type => "text/javascript", :charset => "utf-8"}
-      try { var pageTracker = _gat._getTracker("UA-3168015-2");
-      pageTracker._trackPageview(); } catch(err) {}
+  = render :partial => 'shared/javascripts'
