@@ -10,7 +10,7 @@ IsotopeRails3::Application.routes.draw do
   resources :users
   resources :posts
 
-  match 'work' => 'work'
+  match '/work' => 'work#index'
   match '/work/acolleague' => 'work#acolleague'
   match '/work/aidt' => 'work#aidt'
   match '/work/aiua' => 'work#aiua'
@@ -27,7 +27,7 @@ IsotopeRails3::Application.routes.draw do
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
-
+  match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

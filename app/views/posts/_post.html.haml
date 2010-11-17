@@ -4,8 +4,8 @@
       = image_tag post.user.avatar.url(:thumb)
       %h2= link_to_unless_current h(post.title), post
       %h3
-        by: 
-        = post.user
+        by:
+        = link_to_unless_current post.user, about_path(post.user) 
       %h4= post.created_at.to_formatted_s(:long_ordinal)
     .blog_content
       = post.body.html_safe
