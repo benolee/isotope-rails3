@@ -14,7 +14,11 @@ class User < ActiveRecord::Base
   validates_presence_of :slug, :first_name, :last_name
   validates_uniqueness_of :slug
 
-  before_validation_on_create :set_slug
+  before_validation(:on => :create) do
+    unless slug
+      self.slug = first_name.downcase + '-' + last_name.downcase
+    end
+  end
 
   scope :unlocked, where('locked_at IS NULL')
 
@@ -30,14 +34,12 @@ class User < ActiveRecord::Base
     locked_at?
   end
 
-  def set_slug
-    unless slug
-      self.slug = first_name.downcase + last_name.downcase
-    end
-  end
-
   def to_param
     slug
+  end
+
+  def make_admin!
+    self.update_attribute(:admin, true)
   end
 
 end

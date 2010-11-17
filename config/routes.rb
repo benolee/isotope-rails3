@@ -5,16 +5,30 @@ IsotopeRails3::Application.routes.draw do
 
   match '/about' => 'users#index', :as => :about
   match '/about/:id' => 'users#show', :as => :about
-  match '/blog' => 'posts#index', :as => :blog
+  match '/blog' => 'posts#index', :as => :blogs
   match '/blog/:id' => 'posts#show', :as => :blog
   resources :users
   resources :posts
+  resources :contact
 
-  match '/home/work' => 'home#work'
+  match '/work' => 'work#index'
+  match '/work/acolleague' => 'work#acolleague'
+  match '/work/aidt' => 'work#aidt'
+  match '/work/aiua' => 'work#aiua'
+  match '/work/creative_catering' => 'work#creative_catering'
+  match '/work/deep_south_fibers' => 'work#deep_south_fibers'
+  match '/work/financial' => 'work#financial'
+  match '/work/insight' => 'work#insight'
+  match '/work/in_the_making' => 'work#in_the_making'
+  match '/work/luvnotes' => 'work#luvnotes'
+  match '/work/maralyn_wilson' => 'work#maralyn_wilson'
+  match '/work/political_inquirer' => 'work#political_inquirer'
+  match '/work/sportgraphics' => 'work#sportgraphics'
+
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
-
+  match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

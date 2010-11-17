@@ -1,10 +1,11 @@
 = div_for post do
-  #blog_post
+  .blog_post
     .blog_info_top
       = image_tag post.user.avatar.url(:thumb)
       %h2= link_to_unless_current h(post.title), post
       %h3
-        by: 
-        = post.user
+        by:
+        = link_to_unless_current post.user, about_path(post.user) 
+      %h4= post.created_at.to_formatted_s(:long_ordinal)
     .blog_content
-      = simple_format post.body
+      = post.body.html_safe
