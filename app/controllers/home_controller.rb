@@ -5,11 +5,6 @@ class HomeController < ApplicationController
     tab :home
   end
 
-  def about
-    @users = User.all
-    tab :about
-  end
-
   def contact
     tab :contact
     if request.post?
@@ -34,4 +29,3 @@ class HomeController < ApplicationController
   end
 
 end
-
