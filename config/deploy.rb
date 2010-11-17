@@ -1,8 +1,13 @@
+require 'erb'
+
 # RVM bootstrap
 $:.unshift(File.expand_path("~/.rvm/lib"))
 require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.2-head'
+set :rvm_ruby_string, '1.9.2-head@isotope-rails3'
 set :rvm_type, :user
+
+# Bundler bootstrap
+require 'bundler/capistrano'
 
 # main details
 set :application, "isotopebeta.isotope11.com"
@@ -29,6 +34,8 @@ depend :remote, :gem, "bundler", ">=1.0.0.rc.2"
 
 # tasks
 namespace :deploy do
+  before 'deploy:setup', :db
+
   task :start, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
@@ -48,21 +55,21 @@ namespace :deploy do
   end
 end
 
-after 'deploy:update_code', 'deploy:symlink_shared'
 
-# namespace :bundler do
-#   desc "Symlink bundled gems on each release"
-#   task :symlink_bundled_gems, :roles => :app do
-#     run "mkdir -p #{shared_path}/bundled_gems"
-#     run "ln -nfs #{shared_path}/bundled_gems #{release_path}/vendor/bundle"
-#   end
-# 
-#   desc "Install for production"
-#   task :install, :roles => :app do
-#     run "cd #{release_path} && bundle install"
-#   end
-# 
-# end
-# 
-# after 'deploy:update_code', 'bundler:symlink_bundled_gems'
-# after 'deploy:update_code', 'bundler:install'
+namespace :db do
+  desc "Create database yaml in shared path"
+  task :default do
+    db_config = ERB.new <<-EOF
+production:
+  database: isotope_site_rails3_production
+  adapter: mysql
+  username: root
+  password: isotope_bang
+    EOF
+
+    run "mkdir -p #{shared_path}/config"
+    put db_config.result, "#{shared_path}/config/database.yml"
+  end
+end
+
+after 'deploy:update_code', 'deploy:symlink_shared'
