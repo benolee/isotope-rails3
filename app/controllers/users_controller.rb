@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!, :only => [:edit, :update]
   before_filter :require_admin, :only => [:new, :create]
 
-  layout 'subpage'
-
   def new
     @user = User.new
   end
