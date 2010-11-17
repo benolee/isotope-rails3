@@ -1,17 +1,13 @@
 class HomeController < ApplicationController
-  layout 'subpage'
 
   def index
-    render :layout => 'application'
+    render :layout => 'homepage'
     tab :home
   end
 
   def about
     @users = User.all
     tab :about
-  end
-
-  def clients
   end
 
   def contact
