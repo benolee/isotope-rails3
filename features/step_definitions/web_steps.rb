@@ -97,6 +97,22 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do 
   end
 end
 
+# Then /^I should be on the page "([^\"]*)"$/ do |page|
+#   URI.parse(current_url).should == page
+# end
+
+Then /^it should return a response code of "(.+)"$/ do |response_code|
+  response.code.should == response_code
+end
+
+Then /^I should see the alt text "([^\"]*)"$/ do | alt_text |
+    page.should have_xpath("//img[@alt=#{alt_text}]")
+end
+
+Then /^I should see a link with text "([^\"]*)"$/ do |text|
+  page.should have_link(text)
+end
+
 Then /^(?:|I )should see JSON:$/ do |expected_json|
   require 'json'
   expected = JSON.pretty_generate(JSON.parse(expected_json))

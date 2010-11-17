@@ -11,6 +11,10 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /that user's about page/
+      user = User.last
+      "/about/#{user.slug}"
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
