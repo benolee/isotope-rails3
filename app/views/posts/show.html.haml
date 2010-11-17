@@ -1,8 +1,6 @@
 = render :partial => @post
 %p
-  = link_to "All Posts", blog_path
-  |
-  = link_to "All Posts by #{@post.user}", about_path(@post.user)
+  = link_to "View All Posts", blog_path
 - if current_user && (current_user == @post.user || current_user.admin?)
   %p= link_to 'Edit', edit_post_path(@post)  
 - if current_user && current_user.admin?
