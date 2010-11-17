@@ -2,7 +2,7 @@ class ContactController < ApplicationController
   before_filter :require_admin, :only => [:show, :edit]
 
   def index
-    if current_user && current_user.admin?
+    if admin?
       @contacts = Contact.all
     else
       @contact = Contact.new
