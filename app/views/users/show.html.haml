@@ -1,4 +1,6 @@
 = render :partial => "bio", :locals => { :user => @user }
+- if current_user && (current_user == @user || current_user.admin?)
+  %p= link_to 'Edit User', edit_user_path
 
 .clear
 - unless @posts.empty?

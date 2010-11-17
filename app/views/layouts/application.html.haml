@@ -9,17 +9,11 @@
     #main-wrap
       #header-internal
         #title-bar-internal
-          #top-bar
-            %h1= link_to 'Isotope11', root_path
-            #user_nav= link_to "Login", 'http://assets.isotope11.com'
-            = render :partial => "shared/site_menu"
+          = render :partial => "shared/header"
       #content-wrap
         #content
-          -if flash[:error]
-            .error= flash[:error]
-          -if flash[:notice]
-            .notice= flash[:notice]
+          = render :partial => "shared/flashes"
           = yield
           %br.clear 
     = render :partial => "shared/footer"
-  = render :partial => 'shared/javascripts'
+    = render :partial => 'shared/javascripts'
