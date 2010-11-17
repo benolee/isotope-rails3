@@ -1,5 +1,9 @@
 html {background-color:#d3d3d3;}
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal
+}
+
 body {
   height:auto; 
   width:auto; 
@@ -59,7 +63,6 @@ body.internal {
 h2 {
   font-size:3.9em; 
   color:#333333; 
-  font-weight:lighter; 
   padding: 0; 
   font-family: 'greyscalebasic', arial, serif; 
   margin: 20px 0 7px 0 ;
@@ -287,7 +290,7 @@ ul.nav li a {
 #content h3 {
   font-size:2.7em; 
   margin: 3px 0 7px 0; 
-  font-weight:lighter; 
+  font-weight:normal; 
   font-family: 'greyscalebasic', arial, serif;
 }
 #content h3.typeface-js {
@@ -458,7 +461,7 @@ ul.nav li a {
 .profile h3 {
   font-size:1.8em; 
   color:#666666; 
-  font-weight:lighter; 
+  font-weight:normal; 
   margin: 0; 
   padding: 0;
 }
@@ -593,77 +596,77 @@ form.contact {
   line-height:2.5em;
 }
 label {
-	cursor: pointer; letter-spacing: 0.1428em;}
+  cursor: pointer; letter-spacing: 0.1428em;}
 button {
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 0.1428em;	/*  2px */
-	border: 3px double #666666 ;
-	padding:2px;
-	cursor: pointer;
-	-webkit-transition-property: color;
-	-webkit-transition-property: background-color;
-	-webkit-transition-duration: .25s;
-	-moz-transition-property: color;
-	-moz-transition-property: background-color;
-	-moz-transition-duration: .25s;
-	transition-property: color;
-	transition-property: background-color;
-	transition-duration: .25s;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1428em;  /*  2px */
+  border: 3px double #666666 ;
+  padding:2px;
+  cursor: pointer;
+  -webkit-transition-property: color;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: .25s;
+  -moz-transition-property: color;
+  -moz-transition-property: background-color;
+  -moz-transition-duration: .25s;
+  transition-property: color;
+  transition-property: background-color;
+  transition-duration: .25s;
 }
 
 button:hover,
 button:focus {
-	color: #ffffff;
-	background-color: #0099CC;
-	border: 3px double #003399;
+  color: #ffffff;
+  background-color: #0099CC;
+  border: 3px double #003399;
 }
 
 /* @group quotes */
 
 blockquote {
-	font-size: 1.2857em;		/* 18px */
-	line-height: 2em;		/* 30px */
-	margin-top:  0.6667em;		/* 12px */
-	margin-bottom: 0.6667em;	/* 12px */
+  font-size: 1.2857em;    /* 18px */
+  line-height: 2em;    /* 30px */
+  margin-top:  0.6667em;    /* 12px */
+  margin-bottom: 0.6667em;  /* 12px */
 }
 
 blockquote p {
-	margin-top: 0.3333em;		/*  6px */
-	margin-bottom: 0.6667em;	/* 12px */
+  margin-top: 0.3333em;    /*  6px */
+  margin-bottom: 0.6667em;  /* 12px */
 }
 
 form blockquote {
-	font-style: normal;
+  font-style: normal;
 }
 form blockquote fieldset {
-	margin-top: 0.1111em;		/*  2px */
-	margin-bottom: 1.1111em;	/* 20px */
-	color: #666;
+  margin-top: 0.1111em;    /*  2px */
+  margin-bottom: 1.1111em;  /* 20px */
+  color: #666;
 }
 form blockquote fieldset label {
-	color: #000;
-	display: inline;
-	font-variant: normal;
-	letter-spacing: normal;
+  color: #000;
+  display: inline;
+  font-variant: normal;
+  letter-spacing: normal;
 }
 form blockquote input {
-	background-color: transparent;
-	border: none;
-	border-bottom: 0.1em dashed #000000;
-	font-style: normal;
-	margin: 0 0.5em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1em dashed #000000;
+  font-style: normal;
+  margin: 0 0.5em;
 }
 form blockquote input.description-field {
   width:350px;
 }
 form blockquote input:focus {
-	border-bottom: 0.0714em solid #ccc;		/* 1px */
+  border-bottom: 0.0714em solid #ccc;    /* 1px */
 }
 form blockquote .passwordtoggle {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 /*--------------------------------------new fader------------------------------------------------------*/
 
