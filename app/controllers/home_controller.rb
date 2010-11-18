@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   def contact
     tab :contact
     if request.post?
-      if @contact_form = ContactForm.create(params[:user])
+      if @contact_form = Contact.create(params[:user])
         ContactMailer.contact_email(@contact_form).deliver
         flash.now[:notice] = "Email sent successfully."
       else
