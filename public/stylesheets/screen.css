@@ -211,7 +211,7 @@ ul.nav li a {
   width:69px;
   background:url(../images/blog.png) no-repeat 0 -45px;
   padding: 0 12px 0 0;
-}
+  }
 #blog_tab a:hover {
    background:url(../images/blog.png) no-repeat 0 0;
 }
@@ -310,6 +310,17 @@ ul.nav li a {
   font-size:2em; 
   margin: 0 0 7px 0;
 }
+
+.notice {
+  background:#ccc;
+  border:1px solid #83B0BE;
+  color:#3D606F;
+  margin: 0 auto;
+  padding: 10px 0 10px 375px;
+  font-size:1.7em; 
+}
+
+
 
 #project-top {
   background:url(../images/project-top.png) no-repeat; 
@@ -449,23 +460,25 @@ ul.nav li a {
   margin:0; 
   padding:0;
 }
-.profile h5 {
+#content .profile h5 {
   margin:0; 
-  padding: 0 0 7px 0; 
-  margin: 0 0 3px 0; 
-  font-size:1.4em; 
+  padding: 0 0 3px 0; 
+  margin: 0 0 5px 0;
+  font-size:1.5em; 
   color:#333333;  
   border-bottom:1px solid #cccccc; 
   width:730px;
 }
-.profile h3 {
-  font-size:1.8em; 
+#content .profile h3 {
+  font-size:2.8em; 
   color:#666666; 
   font-weight:normal; 
   margin: 0; 
   padding: 0;
 }
-
+#content .profile h3 a {
+  text-decoration:none;
+}
 .pay-now {
   float:right; 
   display:block;
@@ -494,6 +507,40 @@ hr {
 }
 
 /*--------------------------------------------blog----------------------------------------------*/
+.edit_post .field{
+  width:400px;
+  padding: 10px 0 0 0;
+}
+.edit_post .field input, textarea {
+  float:right;
+}
+.edit_post .actions {
+  margin: 15px 0 8px 0;
+}
+.edit_post .actions input {
+  font-size:1.5em;
+}
+.edit_user .field {
+  width:420px;
+  padding: 10px 0 0 0;
+}
+.edit_user .field label {
+  margin: 0;
+}
+.edit_user .field input {
+  float:right;
+  font-size:1.2em;
+}
+.edit_user textarea {
+  float:right;
+  font-size:1.2em;
+}
+.edit_user .actions {
+  margin: 15px 0 0 0;
+}
+.edit_user .actions input {
+  font-size:1.5em;
+}
 
 .field label {
   font-size:1.4em;
@@ -511,29 +558,45 @@ a.content_link {
 }
 
 .blog_info_top {
- margin: 0 0 15px 0;
+ margin: 0 0 8px 0;
 }
 .blog_info_top img {
   float:left;
   margin: 0 13px 0 0;
 }
-.blog_info_top h2 {
+#content .blog_info_top h2 {
   margin: 0 0 0 6px;
-  font-size:3.1em;
+  font-size:3em;
 }
 .blog_info_top h2 a {
   text-decoration:none;
   underline:none;
+  border:none;
 }
 #blog_post .blog_info_top h3 {
-  font-size:2.2em;
-  margin: 3px 0 0 10px;
+  font-size:2em;
+  margin: 3px 9px 0 1px;
+  float:left;
+  border:none;
 }
+.author {
+  width:500px;
+}
+#content .author p {
+  padding:5px 0 0 7px;
+  font-size:1.4em;
+  color:#444;
+}
+
 .blog_content {
-  margin: 0 0 0 53px;
-}
-.blog_content p {
+  margin: 0 0 0 59px;
+  font-size:1.3em;
   line-height:1.7em;
+  padding: 0 0 15px 0;
+}
+#content .blog_content p {
+  line-height:1.7em;
+  font-size:1.8em;
 }
 /*---------------------------------------------------------------------------------------------footer----------------------------------*/
 
