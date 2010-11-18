@@ -11,7 +11,7 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
-    when /that user's about page/
+    when /that user's show page/
       user = User.last
       "/about/#{user.slug}"
 
