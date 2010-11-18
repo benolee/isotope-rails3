@@ -311,6 +311,17 @@ ul.nav li a {
   margin: 0 0 7px 0;
 }
 
+.notice {
+  background:#ccc;
+  border:1px solid #83B0BE;
+  color:#3D606F;
+  margin: 0 auto;
+  padding: 10px 0 10px 375px;
+  font-size:1.7em; 
+}
+
+
+
 #project-top {
   background:url(../images/project-top.png) no-repeat; 
   height:12px; 
