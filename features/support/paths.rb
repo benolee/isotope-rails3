@@ -27,6 +27,15 @@ module NavigationHelpers
     when /the login page/
       '/login'
 
+    when /the blog index/
+      blogs_path
+
+    when /that post's show page/
+      blog_path(Post.last)
+
+    when /that post's edit page/
+      edit_post_path(Post.last)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
