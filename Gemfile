@@ -8,6 +8,7 @@ gem 'paperclip', '~> 2.3.4'
 gem 'haml', '~> 3.0.23'
 gem 'sass', '~> 3.1.0.alpha.24'
 gem 'will_paginate', '~> 3.0.pre2'
+gem 'escape_utils', '~> 0.1.9'
 
 group :test do
   gem 'capybara', '~> 0.3.9'
