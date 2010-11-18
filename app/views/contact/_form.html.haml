@@ -1,0 +1,16 @@
+%blockquote
+  %fieldset
+    Hey! My name is
+    %input{:type => 'text', :name => 'contact[nickname]', :id => "contact_nickname"}
+    and I was hoping to talk to you guys in order to
+    %input{:type => 'text', :name => 'contact[text]', :class => "description-field", :id => "contact_text"}
+    %br
+    %br
+      By the way, my contact email address is
+    %input{:type => 'text', :name => 'contact[email]', :id => "contact_email"}
+    and I work with
+    %input{:type => 'text', :name => 'contact[company]', :id => "contact_company", :value => ''}
+    %br
+    %br
+    %button{:type => "submit"}
+      Submit
