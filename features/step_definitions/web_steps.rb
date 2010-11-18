@@ -102,7 +102,11 @@ Then /^it should return a response code of "(.+)"$/ do |response_code|
 end
 
 Then /^I should see the alt text "([^\"]*)"$/ do | alt_text |
-  pending # page.should have_xpath("//img[@alt=#{alt_text}]")
+  page.should have_xpath("//img[@alt=\"#{alt_text}\"]")
+end
+
+Then /^I should see the input text "([^\"]*)"$/ do | alt_text |
+  page.should have_xpath("//input[@alt=\"#{alt_text}\"]")
 end
 
 Then /^I should see a link with text "([^\"]*)"$/ do |text|
@@ -210,6 +214,15 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
     current_path.should == path_to(page_name)
   else
     assert_equal path_to(page_name), current_path
+  end
+end
+
+Then /^(?:|I )should not be on (.+)$/ do |page_name|
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should_not
+    current_path.should_not == path_to(page_name)
+  else
+    assert_not_equal path_to(page_name), current_path
   end
 end
 

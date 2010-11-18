@@ -5,7 +5,7 @@ Feature: About
 
   Scenario: The page exists
     When I visit the about page
-    Then it should return a response code of "200"
+    Then I should see "About Us"
 
   Scenario: List unlocked users
     Given the following users:
