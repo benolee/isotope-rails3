@@ -1,8 +1,12 @@
 .bundle
+*.DS_Store
+*.sw*
+capybara*
+config/database.yml
+coverage/
 db/*.sqlite3
 log/*.log
-config/database.yml
-tmp/**/*
-*.swp
-*.DS_Store
 public/system/**/*
+public/stylesheets/compiled/*
+.rvmrc
+tmp/**/*

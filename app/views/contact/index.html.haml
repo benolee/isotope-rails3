@@ -1,0 +1,45 @@
+- content_for :title do
+  Contact &ndash; Isotope11 
+#internal-title
+.content-left
+  %img{:src => "/images/contact-img.png", :alt => "contact image"} 
+  %p{:class => "contact-title"}
+    Isotope11
+  %p
+    529 Beacon Pkwy W - Suite 105
+    %br 
+    Birmingham, AL 35209
+    %br
+    p: 877.476.8671
+    %br 
+    f: 205.943.5760
+    %br 
+    e:
+    %a{:href => "mailto:info@isotope11.com"}
+      info@isotope11.com
+
+- unless current_user && current_user.admin?
+  %h2{:class => "typeface-js"}
+    Contact Us
+  %p  For business inquiries, please contact us directly or just fill out our simple contact form
+  %br 
+  %br 
+
+  - form_tag :action => 'create' do |f|
+    = render 'form'
+
+- if current_user && current_user.admin?
+  %table
+    %thead
+      %th Contact Name
+      %th Contact Email
+      %th Contact Company
+      %th Contact Note
+    - @contacts.each do |contact|
+      %tr
+        %td= link_to contact.nickname, contact_path(contact)
+        %td= contact.email
+        %td= contact.company
+        %td= contact.text
+    /- form_for contact do |f|
+    /  = render :partial => 'contact_form', :locals => { :f => f }

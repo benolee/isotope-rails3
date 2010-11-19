@@ -1,4 +1,4 @@
-production
+production:
   adapter: mysql
   database: isotope_site_rails3_production
   login: root

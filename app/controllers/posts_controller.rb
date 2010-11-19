@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :authorized_user, :only => [:edit, :update, :destroy]
-  layout 'subpage'
 
-  # GET /posts
-  # GET /posts.xml
+  tab :blog
+
   def index
     @posts = Post.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
@@ -14,10 +13,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,11 +22,8 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.xml
   def new
     @post = Post.new
-    @post.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,19 +31,17 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
-  # POST /posts
-  # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
+        format.html { redirect_to(blog_path(@post), :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
         format.html { render :action => "new" }
@@ -58,14 +50,12 @@ class PostsController < ApplicationController
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.xml
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }
+        format.html { redirect_to(blog_path(@post), :notice => 'Post was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -74,30 +64,24 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.xml
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
+    @post = Post.find_by_slug(params[:id])
+    if @post.destroy
+      redirect_to(posts_url)
     end
   end
 
+  ######################################################################
   private
+  ######################################################################
 
-    def authorized_user
-      post = Post.find(params[:id])
-      unless post.user == current_user || admin?
-        flash[:error] = 'You must be the creator or an admin to do that'
-        redirect_to root_path
-      end
+  def authorized_user
+    post = Post.find_by_slug(params[:id])
+    unless post.user == current_user || admin?
+      flash[:error] = 'You must be the creator or an admin to do that'
+      redirect_to root_path
     end
-
-    def admin?
-      current_user.admin
-    end
+  end
 
 end
+
