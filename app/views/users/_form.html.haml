@@ -1,50 +1,52 @@
-= form_for @user, :html => { :multipart => true } do |f|
-  - if @user.errors.any?
-    #error_explanation
-      %h2= pluralize(@user.errors.count, "error") + "prohibited this post from being saved:"
-      %ul
-      - @user.errors.full_messages.each do |msg|
-        %li= msg
-
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :middle_initial
-    = f.text_field :middle_initial
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :position
-    = f.text_field :position
-  .field
-    = f.label :bio
-    = f.text_area :bio
-  - if @user == current_user || current_user.admin?
+.edit_user
+  = form_for @user, :html => { :multipart => true } do |f|
+    - if @user.errors.any?
+      #error_explanation
+        %h2= pluralize(@user.errors.count, "error") + "prohibited this post from being saved:"
+        %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+   
     .field
-      = f.label :password
-      = f.password_field :password
+      = f.label :first_name
+      = f.text_field :first_name
     .field
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation
-  - if @user.created_at?
+      = f.label :middle_initial
+      = f.text_field :middle_initial
     .field
-      %p Current Avatar:
-      %p= image_tag @user.avatar.url
+      = f.label :last_name
+      = f.text_field :last_name
     .field
-      = f.label :avatar
-      = f.file_field :avatar
-  - if current_user.admin? && @user.created_at?
+      = f.label :email
+      = f.text_field :email
     .field
-      = f.label :lock_user
-      = f.radio_button(:locked, :false)
-      = f.label :unlocked
-      = f.radio_button(:locked, :true)
-      = f.label :locked
-  .actions
-    = f.submit
+      = f.label :position
+      = f.text_field :position
+    .field
+      = f.label :bio
+      = f.text_area :bio
+    .clear  
+    - if @user == current_user || current_user.admin?
+      .field
+        = f.label :password
+        = f.password_field :password
+      .field
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation
+    - if @user.created_at?
+      .field
+        %p Current Avatar:
+        %p= image_tag @user.avatar.url
+      .field
+        = f.label :avatar
+        = f.file_field :avatar
+    - if current_user.admin? && @user.created_at?
+      .field
+        = f.label :lock_user
+        = f.radio_button(:locked, :false)
+        = f.label :unlocked
+        = f.radio_button(:locked, :true)
+        = f.label :locked
+    .actions
+      = f.submit
 
