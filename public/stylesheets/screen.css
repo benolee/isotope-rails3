@@ -318,8 +318,8 @@ ul.nav li a {
 }
 
 #project_slider_bottom {
-  background:url(../images/project-bg-bottom.png) no-repeat;
-  height:321px;
+  background:url(../images/project-bg-bottom.png) 0 80px  no-repeat;
+  height:391px;
   width:962px;
   margin: 0 auto;
 }
@@ -341,6 +341,12 @@ ul.nav li a {
   height:77px;
   width:224px;
 }
+
+#project_slider_bottom .feature_title img {
+  float:right;
+  margin: 5px 18px 0 0;
+}
+
 #project_slider_bottom .feature p {
   padding: 0 10px 0 5px;
   font-size:1.2em;
@@ -400,12 +406,9 @@ ul.nav li a {
 }
 #project-slider .feature_title img {
   float:right;
-  margin: 0 10px 0 0;
+  margin: 5px 10px 0 0;
 }
-#project-slider .feature_title img.mlm {
-  float:right;
-  margin: 0 30px 0 0;
-}
+
 #project-slider .feature p {
   padding: 0 10px 0 5px;
   font-size:1.2em;
