@@ -51,7 +51,7 @@ Feature: As a user
     And I should see the post date within ".blog_info_top"
     And I should see "Testbody" within ".blog_content"
 
-  Scenario: View an individual post
+  Scenario: View an individual post (the show page)
     Given the following users:
       | first_name | middle_initial | last_name | email               | password | password_confirmation | position  | bio            |
       | Test       | T              | Man       | testman@example.com | 123456   | 123456                | developer | Bio goes here. |
@@ -98,3 +98,14 @@ Feature: As a user
     And I fill in "post_body" with "This is the test post body."
     And I press "Update Post"
     Then I should see "Post was successfully updated"
+
+  Scenario: Destroy a post as an admin user
+    Given I am an authenticated user with admin priveleges
+    And the following users:
+      | first_name | middle_initial | last_name | email               | password | password_confirmation | position  | bio            |
+      | Test       | T              | Man       | testman@example.com | 123456   | 123456                | developer | Bio goes here. |
+    And a post by that user with title "Testpost" and body "Testbody" and slug "test-post" and created at "2010-10-01"
+    When I go to that post's show page
+    And I press "Destroy"
+    Then I should see "Post was successfully destroyed."
+    And I should not see "Testpost"

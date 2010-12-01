@@ -67,7 +67,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by_slug(params[:id])
     if @post.destroy
-      redirect_to(posts_url)
+      redirect_to(posts_url, :notice => 'Post was successfully destroyed.')
     end
   end
 
