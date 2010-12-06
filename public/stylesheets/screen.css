@@ -557,8 +557,71 @@ ul.career {
 }
 hr {
   color:#999999;
+  margin: 0 0 15px 0;
 }
 
+.work_services_wrap {
+  background:url(../images/work_section_bg.png) no-repeat;
+  width:405px;
+  height:140px;
+  margin: 0 40px 0 0;
+  padding:0;
+  float:left;
+}
+#content .work_services_wrap h4.typeface-js {
+  font-size:2.8em;
+  margin: 15px 0 3px 0;
+  padding:0;
+  height:32px;
+}
+
+#content .work_services_wrap .typeface-js-vector-container {
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#content .work_services_wrap p {
+  margin: 0 0 0 0;
+  line-height:1.6em;
+  padding:0;  
+  font-size:1.2em;
+}
+
+.services_link {
+  display:block;
+  position:absolute;
+  text-indent:-9999em;
+  height:125px;
+  width:390px;
+}
+
+.work_services_wrap p {
+  width:355px;
+  margin:0;
+}
+
+.work_content_left {
+  width:459px;
+  float:left;
+}
+.work_content_right {
+  width:459px;
+  float:right;
+  margin: 0 15px 0 0;
+}
+.work_services_img {
+  float:left;
+  width:50px;
+  height:85px;
+  padding:30px 15px 0 15px;
+}
+.work_services_img_mlm {
+  float:left;
+  width:80px;
+  height:85px;
+  padding:30px 10px 0 10px;
+}
 /*--------------------------------------------blog----------------------------------------------*/
 /*-----------------edit post----------------------*/
 .edit_post .field{
