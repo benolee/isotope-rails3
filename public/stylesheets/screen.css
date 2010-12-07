@@ -312,14 +312,14 @@ ul.nav li a {
 }
 #project-slider {
   background:url(../images/project-bg.png) no-repeat; 
-  height:321px; 
+  height:221px; 
   width:962px; 
   margin: 0 auto;
 }
 
 #project_slider_bottom {
   background:url(../images/project-bg-bottom.png) 0 80px  no-repeat;
-  height:391px;
+  height:241px;
   width:962px;
   margin: 0 auto;
 }
@@ -605,10 +605,32 @@ hr {
   width:459px;
   float:left;
 }
+
+#content .work_content_left h3 {
+  font-size:4em;
+}
+.work_content_right img{
+  width:459px;
+  height:auto;
+}
 .work_content_right {
   width:459px;
   float:right;
   margin: 0 15px 0 0;
+}
+.work_content_right ul {
+  float:left;
+  list-style:disc;
+  margin: 0 0 0 29px;
+}
+.work_content_right li {
+  padding: 0 0 7px 0;
+  list-style:disc;
+  font-size:1.3em;
+}
+.work_content_right h4 {
+  float:left;
+  padding: 0 0 0 13px;
 }
 .work_services_img {
   float:left;
@@ -622,6 +644,23 @@ hr {
   height:85px;
   padding:30px 10px 0 10px;
 }
+.work_examples {
+  width:950px;
+  margin: 10px 0 10px 0;
+  border-top:1px solid #666;
+  padding: 20px 0 20px 0;
+}
+.work_examples img {
+  float:left;
+  width:260px;
+  height:auto;
+}
+.work_examples_content {
+  width:675px;
+  float:right;
+}
+
+
 /*--------------------------------------------blog----------------------------------------------*/
 /*-----------------edit post----------------------*/
 .edit_post .field{
