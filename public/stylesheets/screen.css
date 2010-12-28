@@ -312,14 +312,14 @@ ul.nav li a {
 }
 #project-slider {
   background:url(../images/project-bg.png) no-repeat; 
-  height:221px; 
+  height:172px; 
   width:962px; 
   margin: 0 auto;
 }
 
 #project_slider_bottom {
   background:url(../images/project-bg-bottom.png) 0 80px  no-repeat;
-  height:241px;
+  height:181px;
   width:962px;
   margin: 0 auto;
 }
