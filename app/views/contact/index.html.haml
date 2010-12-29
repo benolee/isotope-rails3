@@ -25,7 +25,7 @@
   %br 
   %br 
 
-  - form_tag :action => 'create' do |f|
+  = form_tag :action => 'create' do |f|
     = render 'form'
 
 - if current_user && current_user.admin?

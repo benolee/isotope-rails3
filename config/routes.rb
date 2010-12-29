@@ -3,7 +3,7 @@ IsotopeRails3::Application.routes.draw do
 
   devise_for :users, :path => '/', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
-  match '/about' => 'users#index', :as => :about
+  match '/about' => 'users#index', :as => :about_index
   match '/about/:id' => 'users#show', :as => :about
   match '/blog' => 'posts#index', :as => :blogs
   match '/blog/:id' => 'posts#show', :as => :blog
@@ -24,6 +24,15 @@ IsotopeRails3::Application.routes.draw do
   match '/work/maralyn_wilson' => 'work#maralyn_wilson'
   match '/work/political_inquirer' => 'work#political_inquirer'
   match '/work/sportgraphics' => 'work#sportgraphics'
+  match '/work/phasezero' => 'work#phasezero'
+  match '/work/socialmedia' => 'work#socialmedia'
+  match '/work/ecommerce' => 'work#ecommerce'
+  match '/work/mlm' => 'work#mlm'
+  match '/work/financial' => 'work#financial'
+  match '/work/insurance' => 'work#insurance'
+  match '/work/mobile' => 'work#mobile'
+  match '/work/saas' => 'work#saas'
+
 
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'

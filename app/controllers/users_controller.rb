@@ -45,7 +45,7 @@ class UsersController < ApplicationController
         @user.unlock_access!
       end
     else
-      params[:user]["locked"].delete
+      params[:user]["locked"].delete if params[:user]["locked"]
     end
 
     if @user.update_attributes(params[:user])
