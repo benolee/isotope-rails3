@@ -24,6 +24,15 @@ IsotopeRails3::Application.routes.draw do
   match '/work/maralyn_wilson' => 'work#maralyn_wilson'
   match '/work/political_inquirer' => 'work#political_inquirer'
   match '/work/sportgraphics' => 'work#sportgraphics'
+  match '/work/phasezero' => 'work#phasezero'
+  match '/work/socialmedia' => 'work#socialmedia'
+  match '/work/ecommerce' => 'work#ecommerce'
+  match '/work/mlm' => 'work#mlm'
+  match '/work/financial' => 'work#financial'
+  match '/work/insurance' => 'work#insurance'
+  match '/work/mobile' => 'work#mobile'
+  match '/work/saas' => 'work#saas'
+
 
   match '/home/services' => 'home#services'
   match '/home/contact' => 'home#contact'
