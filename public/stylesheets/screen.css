@@ -318,12 +318,11 @@ ul.nav li a {
 }
 
 #project_slider_bottom {
-  background:url(../images/project-bg-bottom.png) 0 80px  no-repeat;
-  height:181px;
+  background:url(../images/project-bg-bottom.png) 0 10px no-repeat;
+  height:182px;
   width:962px;
   margin: 0 auto;
 }
-
 #project_slider_bottom .feature-wrap {
   width:950px;
   margin: 0 0 0 14px;
@@ -335,13 +334,17 @@ ul.nav li a {
   border-right:1px solid #a0b2b9;
   margin: 0 5px 0 0;
 }
-
+* + html #project_slider_bottom .feature {
+  padding: 10px 0 0 0;
+}
+* + html #project_slider_bottom .feature-last {
+  padding: 10px 0 0 0;
+}
 #project_slider_bottom .feature_title {
   background:url(../images/feature_title.png) no-repeat;
   height:77px;
   width:224px;
 }
-
 
 #project_slider_bottom .feature_title img {
   float:right;
@@ -495,6 +498,7 @@ ul.nav li a {
 }
 #project-slider .feature {
   width:230px;
+  height:148px;
   float:left;
   border-right:1px solid #a0b2b9;
   padding: 10px 0 15px 0;
@@ -671,7 +675,7 @@ hr {
 }
 #content .work_services_wrap h4.typeface-js {
   font-size:2.8em;
-  margin: 15px 0 3px 0;
+  margin: 12px 0 7px 0;
   padding:0;
   height:32px;
 }
@@ -689,14 +693,48 @@ hr {
   font-size:1.2em;
 }
 
+#content .work_services_text {
+  float:left;
+  height:120px;
+  width:280px;
+}
+#content .work_services_text a {
+  width:270px;
+  color:#000;
+  font-size:1.2em;
+  padding: 4px 0 0 0;
+  text-decoration:none; 
+  margin: 4px 0 0 0;
+  line-height:1.5em;
+}
+#content .work_services_text h4 a {
+  color:#003366;
+  padding: 0;
+  margin:0 ;
+  font-size:1em;
+}
+#content .work_services_text h4 a:hover {
+  text-decoration:none;
+}
+#content .work_services_text a:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+* + html #content .work_services_text p {
+  font-size:1.1em;
+
+}
+
 .services_link {
-  display:block;
   position:absolute;
   text-indent:-9999em;
+  display:block; 
   height:125px;
   width:390px;
 }
-
+* + html .services_link {
+  display:none;
+}
 .work_services_wrap p {
   width:355px;
   margin:0;
@@ -729,8 +767,12 @@ hr {
 }
 .work_content_right li {
   padding: 0 0 7px 0;
-  list-style:disc;
   font-size:1.3em;
+  list-style:disc;
+}
+* + html .work_content_right li {
+  list-style:disc inside none;
+  margin: 0 0 0 -13px;
 }
 .work_content_right h4 {
   float:left;
