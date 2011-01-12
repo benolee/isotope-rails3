@@ -32,6 +32,8 @@ IsotopeRails3::Application.routes.draw do
   match '/work/insurance' => 'work#insurance'
   match '/work/mobile' => 'work#mobile'
   match '/work/saas' => 'work#saas'
+  match '/work/xrono' => 'work#xrono'
+  match '/work/rubyham' => 'work#rubyham'
 
 
   match '/home/services' => 'home#services'
