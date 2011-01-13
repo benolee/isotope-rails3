@@ -20,11 +20,11 @@ IsotopeRails3::Application.routes.draw do
   match '/services/insurance' => 'services#insurance'
   match '/services/mobile' => 'services#mobile'
   match '/services/saas' => 'services#saas'
-  match '/services/xrono' => 'services#xrono'
-  match '/services/rubyham' => 'services#rubyham'
 
-
-  match '/home/community' => 'home#community'
+  match '/community' => 'community#index'
+  match '/community/xrono' => 'community#xrono'
+  match '/community/rubyham' => 'community#rubyham'
+  
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
   match '/home/careers' => 'home#careers'
