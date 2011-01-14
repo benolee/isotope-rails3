@@ -1,8 +1,4 @@
-class WorkController < ApplicationController
-
-  def index
-    tab :work
-  end
+class ServicesController < ApplicationController
 
   def acolleague
     tab :work
@@ -49,10 +45,6 @@ class WorkController < ApplicationController
   end
 
   def sportgraphics
-    tab :work
-  end
-
-  def phasezero
     tab :work
   end
 
