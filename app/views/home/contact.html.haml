@@ -1,11 +1,11 @@
 - content_for :title do 
-  Contact &ndash; Isotope11 
+  Contact &ndash; Isotope|eleven 
 
 #internal-title
 .content-left
   %img{:src => "/images/contact-img.png", :alt => "contact image"} 
   %p{:class => "contact-title"}
-    Isotope11
+    Isotope|eleven
   %p
     529 Beacon Pkwy W - Suite 105
     %br 
@@ -27,7 +27,7 @@
 %p  For business inquiries, please contact us directly or just fill out our simple contact form
 %br 
 %br 
-- form_tag :action => 'contact' do |f|
+= form_tag :action => 'contact' do |f|
   %blockquote
     %fieldset
       Hey! My name is

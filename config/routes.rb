@@ -3,7 +3,7 @@ IsotopeRails3::Application.routes.draw do
 
   devise_for :users, :path => '/', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
-  match '/about' => 'users#index', :as => :about
+  match '/about' => 'users#index', :as => :about_index
   match '/about/:id' => 'users#show', :as => :about
   match '/blog' => 'posts#index', :as => :blogs
   match '/blog/:id' => 'posts#show', :as => :blog
@@ -24,6 +24,7 @@ IsotopeRails3::Application.routes.draw do
   match '/community' => 'community#index'
   match '/community/xrono' => 'community#xrono'
   match '/community/rubyham' => 'community#rubyham'
+  match '/community/state_machine_audits' => 'community#state_machine_audits'
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'

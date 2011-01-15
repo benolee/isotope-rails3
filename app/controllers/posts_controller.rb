@@ -10,6 +10,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
+      format.json { render :json => @posts }
+      format.atom
     end
   end
 
@@ -67,7 +69,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by_slug(params[:id])
     if @post.destroy
-      redirect_to(posts_url)
+      redirect_to(posts_url, :notice => 'Post was successfully destroyed.')
     end
   end
 

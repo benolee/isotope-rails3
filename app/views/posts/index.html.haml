@@ -1,4 +1,6 @@
-%h2 Blog
+%h2
+  Blog
+  %span#rss_link= link_to (image_tag 'feed-icon-28x28.png'), '/posts.atom'
 
 = render @posts
 = will_paginate @posts
