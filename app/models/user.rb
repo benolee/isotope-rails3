@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   scope :unlocked, where('locked_at IS NULL')
 
   def to_s
-    "#{first_name} #{middle_initial} #{last_name}"
+    "#{first_name} #{middle_initial} #{last_name}".squish
   end
 
   def name

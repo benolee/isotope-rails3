@@ -1,0 +1,25 @@
+- content_for :title do
+  state_machine_audits &ndash; Community &ndash; Isotope|eleven
+
+#internal-title	
+  %h2{:class => "typeface-js"}
+    Community 
+.work_content_right
+  %img{:src => "/images/phase_zero.png", :alt => "work thumb"} 
+  %h4 state_machine_audits 
+  .clear
+  %ul 
+    %li
+      = link_to('RubyGem page', 'http://rubygems.org/gems/state_machine_audits')
+    %li 
+      = link_to('Github Repo', 'http://github.com/isotope11/state_machine_audits')
+.work_content_left
+  %h3{:class => "typeface-js"}
+    state_machine_audits
+  %p
+    = link_to('state_machine_audits', 'http://github.com/isotope11/state_machine_audits')
+    is a gem intended to be used in conjunction with the state_machine gem in a Rails project.  It ties into ActiveRecord callbacks to keep an audit trail of your object's state changes.
+  %p
+    %a{:href => "/community"}
+      Back to Community 
+.clear
