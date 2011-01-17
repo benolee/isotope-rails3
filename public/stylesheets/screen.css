@@ -871,7 +871,7 @@ a.content_link {
   display:block;
 }
 /*----------------------blog styling-------------------*/
-#blog_post {
+#content .blog_post {
   border-bottom:1px solid #ccc;
   padding: 0 0 10px 0;
   margin: 25px 0 15px 0;  
@@ -893,7 +893,7 @@ a.content_link {
   underline:none;
   border:none;
 }
-#blog_post .blog_info_top h3 {
+#content .blog_post .blog_info_top h3 {
   font-size:2em;
   margin: 3px 9px 0 1px;
   float:left;
@@ -916,7 +916,7 @@ a.content_link {
 }
 #content .blog_content p {
   line-height:1.7em;
-  font-size:1.8em;
+  font-size:1.3em;
 }
 /*----------------------------------------------------------footer----------------------------------*/
 #footer {
