@@ -1,26 +1,178 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>404 - This page could not be found</title>
+       <meta content="2009-12-02T14:31:41-0600" name="date" />
+    <meta name="keywords" content="Isotope, Isotope11, Isotope Eleven, internet, Laird Foret, software, custom software, Birmingham, custom software birmingham, alabama, custom development birmingham, consulting, Ruby development, Ruby on Rails development, rails development, linux, technology firm" />
+    <meta name="description" content="Isotope11 specializes in custom software development on Linux based platforms using Ruby on Rails (RoR). Our expert skill sets also include e-commerce and financial applications, social networking applications, database architectures, graphic design, user interfaces and much more."/>
+    <style type="text/css">
+      html{color:#000;background:#eeeeee;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+            html {background-color:#d3d3d3;}
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
-  </div>
-</body>
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: normal
+      }
+
+      body {
+        height:auto; 
+        width:auto; 
+        font: 62.5% Verdana, Arial, Helvetica, sans-serif; 
+        background:url(/images/body-bg.jpg) repeat-x; 
+        background-color:#ececec; 
+        margin: 0 auto;
+      }
+
+      a {
+        border:none; 
+        outline:none;
+      }
+
+      body.internal {
+        background:url(images/body-bg-internal.png) repeat-x;  
+        background-color:#ececec;
+      }
+
+      #main-wrap {
+        width:1200px; 
+        margin: 0 auto;
+      }
+
+      #header-internal {
+        background:url(images/header-bg.jpg) repeat-y; 
+        background-color:#15334d; 
+        height:125px; 
+        width:auto; 
+        margin: 0 auto;
+        padding: 0; 
+      }
+
+      #internal-title {
+        width:962px; 
+        margin:14px auto; 
+        font-family:'greyscalebasic', arial, sans serif;
+      }
+
+    #top-bar {
+      width:960px; 
+      height:150px; 
+      margin: 0 auto;
+      padding:0;
+    }
+
+    h1 a {
+      background:url(images/logo.png) 0 0 no-repeat; 
+      width:262px; height:126px; 
+      display:block; 
+      text-indent:-9999em; 
+      margin: 0; 
+      padding: 0; 
+      float:left;
+    }
+    h1 a:hover {
+      background:url(images/logo.png) 0 -126px no-repeat; 
+      width:262px; 
+      height:126px; 
+      display:block; 
+      text-indent:-9999em; 
+      margin:0; 
+      padding:0; 
+      float:left; 
+    }
+    #content-wrap {
+      width:1200px; 
+      margin:0 auto;
+    }
+    #content {
+      margin: 0 auto 25px 130px; 
+      width:962px; 
+      height:auto;
+    }
+    #content a {
+      color:#3d606f;
+    }
+    #content a:hover {
+      color:#000066;
+    }
+    #content p {
+      font-size:1.3em; 
+      margin: 0 0 13px 0; 
+      line-height:1.6em;
+    }
+    #content h3 {
+      font-size:2.7em; 
+      margin: 3px 0 7px 0; 
+      font-weight:normal; 
+      font-family: 'greyscalebasic', arial, serif;
+    }
+    #footer {
+      width:100%; 
+      background:url(images/footer-bg.png) repeat-x; 
+      height:94px;
+    }
+    #footer-content-wrap {
+      width:1200px; 
+      margin: 0 auto; 
+      display:block; 
+      height:94px;
+    }
+    #footer-content-wrap ul.footer-content {
+      float:left; 
+      margin: 0 0 15px 131px; 
+      padding: 25px 0 0 0; 
+      color:#3d606f; 
+      font-size:1.1em;
+      width:180px;
+      height:auto;
+    }
+    #footer .footer-content li {
+      padding: 0 5px 3px 0;
+    }
+    #footer .footer-content li a {
+      color:#3d606f;
+    }
+    #footer .footer-content li a:hover {
+      color:#000066;
+    }
+    </style>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  </head>
+  <body class="internal">
+    <div id="main-wrap">
+      <div id="header-internal">
+      <div id="title-bar-internal">
+          <div id="top-bar">
+        <h1><a href="index.html">Isotope11</a></h1>
+          </div>
+          </div>
+        </div>    
+    </div>
+    </div>
+    <div id="content-wrap">
+      <div id="content">
+        <div id="internal-title"> 
+        <h3>404 Error</h3>
+        </div>
+        <p>Sorry, the page you're looking for has been moved or no longer exists. Please <a href="http://www.isotope11.com">return home</a>. 
+         </p>   
+    <br/>
+    </div>
+    </div>
+    <div id="footer">
+        <div id="footer-content-wrap">
+          <ul class="footer-content">
+            <li>Isotope 11</li>
+            <li>529 Beacon Pkwy W</li>
+            <li>Suite 105</li>
+            <li>Birmingham, AL 35209</li>
+            <li>p: 877.476.8671</li>
+            <li>f: 205.943.5760</li>
+            <li>e: <a href="mailto:info@isotope11.com">info@isotope11.com</a></li>
+            </ul>
+          </div>
+        </div>
+  </body>
 </html>
+
+
