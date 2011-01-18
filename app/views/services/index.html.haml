@@ -11,104 +11,75 @@
   Follow the links to learn more
 %hr
 .work_services_wrap
-  %a{:href => "/services/phasezero", :class => "services_link"}
-    Link to Phase Zero
+  = link_to 'Link to Phase Zero', '/services/phasezero', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/phasezero"}
-      = image_tag 'feature_phasezero.png'
+    = link_to(image_tag('feature_phasezero.png'), '/services/phasezero')
   .work_services_text 
     %h4{:class => "typeface-js"}
-      %a{:href => "/services/phasezero"}
-        Phase Zero
-    %a{:href => "/services/phasezero"}
-      Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project...
+      = link_to 'Phase Zero', '/services/phasezero'
+    = link_to 'Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project...', '/services/phasezero'
 
 .work_services_wrap
-  %a{:href => "/services/socialmedia", :class => "services_link"}
-    Link to Social Media 
+  = link_to 'Link to Social Media', '/services/socialmedia', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/socialmedia"}
-      = image_tag 'feature_social.png'
+    = link_to(image_tag('feature_social.png'), '/services/socialmedia')
   .work_services_text  
     %h4{:class => "typeface-js"}
-      %a{:href => "/services/socialmedia"}
-        Social Media
-    %a{:href => "/services/socialmedia"}
-      Social Media is all the buzz. Work with a team that knows the ins and outs of the business... 
+      = link_to 'Social Media', '/services/socialmedia'
+    = link_to 'Social Media is all the buzz. Work with a team that knows the ins and outs of the business...', '/services/socialmedia' 
 
 .work_services_wrap
-  %a{:href => "/services/ecommerce", :class => "services_link"}
-    Link to E-Commerce 
+  = link_to 'Link to E-Commerce', '/services/ecommerce', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/ecommerce"}
-      = image_tag 'feature_ecom.png'
+    = link_to(image_tag('feature_ecom.png'), '/services/ecommerce')
   .work_services_text 
     %h4{:class => "typeface-js"}
-      %a{:href => "/services/ecommerce"}
-        E-Commerce
-    %a{:href => "/services/ecommerce"}
-      Ready to get your business online, and move beyond a basic webpage?...
+      = link_to 'E-Commerce', '/services/ecommerce'
+    = link_to 'Ready to get your business online, and move beyond a basic webpage?...', '/services/ecommerce'
+
 .work_services_wrap
-  %a{:href => "/services/mlm", :class => "services_link"}
-    Link to MLM
+  = link_to 'Link to MLM', '/services/mlm', :class => 'services_link'
   .work_services_img_mlm
-    %a{:href => "/services/mlm"}
-      = image_tag 'feature_mlm.png'
+    = link_to(image_tag('feature_mlm.png'), '/services/mlm')
   .work_services_text  
     %h4{:class => "typeface-js"}
-      %a{:href => "/services/mlm"}
-        MLM
-    %a{:href => "/services/mlm"}
-      Need multi-level marketing? We have the complete solution... 
-.work_services_wrap
-  %a{:href => "/services/financial", :class => "services_link"}
-    Link to Financial
-  .work_services_img
-    %a{:href => "/services/financial"}
-      = image_tag 'feature_financial.png'
-  .work_services_text 
-    %h4{:class => "typeface-js"}
-      %a{:href => "/services/financial"}
-        Financial
-    %a{:href => "/services/financial"}
-      Having architected, developed and maintained one of the largest Ruby based financial applications in the world... 
+      = link_to 'MLM', '/services/mlm'
+    = link_to 'Need multi-level marketing? We have the complete solution...', '/services/mlm' 
 
 .work_services_wrap
-  %a{:href => "/services/insurance", :class => "services_link"}
-    Link to Insurance
+  = link_to 'Link to Financial', '/services/financial', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/insurance"}
-      = image_tag 'feature_insurance.png'
+    = link_to(image_tag('feature_financial.png'), '/services/financial')
+  .work_services_text 
+    %h4{:class => "typeface-js"}
+      = link_to 'Financial', '/services/financial'
+    = link_to 'Having architected, developed and maintained one of the largest Ruby based financial applications in the world...', '/services/financial' 
+
+.work_services_wrap
+  = link_to 'Link to Insurance', '/services/insurance', :class => 'services_link'
+  .work_services_img
+    = link_to(image_tag('feature_insurance.png'), '/services/insurance')
   .work_services_text  
     %h4{:class => "typeface-js"} 
-      %a{:href => "/services/insurance"}
-        Insurance
-    %a{:href => "/services/insurance"}
-      Many factors go into formulating a successful and accurate insurance quote... 
+      = link_to 'Insurance', '/services/insurance'
+    = link_to 'Many factors go into formulating a successful and accurate insurance quote...', '/services/insurance' 
 
 .work_services_wrap
-  %a{:href => "/services/mobile", :class => "services_link"}
-    Link to Mobile
+  = link_to 'Link to Mobile', '/services/mobile', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/mobile"}
-      = image_tag 'feature_mobile.png'
+    = link_to(image_tag('feature_mobile.png'), '/services/mobile')
   .work_services_text
     %h4{:class => "typeface-js"}
-      %a{:href => "/services/mobile"}
-        Mobile
-    %a{:href => "/services/mobile"}
-      Good mobile applications are much more than a basic functioning iPhone app...  
+      = link_to 'Mobile', '/services/mobile'
+    = link_to 'Good mobile applications are much more than a basic functioning iPhone app...', '/services/mobile'  
 
 .work_services_wrap
-  %a{:href => "/services/saas", :class => "services_link"}
-    Link to SaaS
+  = link_to 'Link to SaaS', '/services/saas', :class => 'services_link'
   .work_services_img
-    %a{:href => "/services/saas"}
-      = image_tag 'feature_saas.png'
+    = link_to(image_tag('feature_saas.png'), '/services/saas')
   .work_services_text  
-    %h4{:class => "typeface-js"} 
-      %a{:href => "/services/saas"}
-        SaaS
+    %h4{:class => "typeface-js"}
+      = link_to 'SaaS', '/services/saas'
     %a{:href => "/services/saas"}
-      Software as a Service isn't just about recurring revenue... 
+    = link_to 'Software as a Service isn\'t just about recurring revenue...', '/services/saas' 
 .clear

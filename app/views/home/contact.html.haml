@@ -3,7 +3,7 @@
 
 #internal-title
 .content-left
-  %img{:src => "/images/contact-img.png", :alt => "contact image"} 
+  = image_tag '/images/contact-img.png', :alt => 'Contact Image'
   %p{:class => "contact-title"}
     Isotope|eleven
   %p
@@ -16,8 +16,7 @@
     f: 205.943.5760
     %br 
     e:
-    %a{:href => "mailto:info@isotope11.com"}
-      info@isotope11.com
+    = link_to 'info@isotope11.com', 'mailto:info@isotope11.com'
 
 - if flash[:error]
   %span= flash[:error]

@@ -20,10 +20,6 @@ class ServicesController < ApplicationController
     tab :work
   end
 
-  def financial
-    tab :work
-  end
-
   def insight
     tab :work
   end

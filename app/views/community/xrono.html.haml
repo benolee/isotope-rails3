@@ -5,7 +5,7 @@
   %h2{:class => "typeface-js"}
     Community 
 .work_content_right
-  %img{:src => "/images/work-xrono.png", :alt => "work thumb"} 
+  = image_tag '/images/work-xrono.png', :alt => 'Xrono Work Image'
   %h4 Xrono 
   .clear
   %ul 
@@ -19,19 +19,18 @@
       Robust Invoicing and Payroll systems
     %li
       Comprehensive test suite for
-      %a{:href => "https://github.com/isotope11/xrono", :target => "_blank"}continued development
+      = link_to 'continued development', 'https://github.com/isotope11/xrono', :target => '_blank'
 .work_content_left
   %h3{:class => "typeface-js"}
     Xrono 
   %p
-    %a{:href => "http://www.xrono.org"} Xrono 
+    = link_to 'Xrono', 'http://www.xrono.org'
     is a mature, open source, time tracking solution for your business. Developed by Isotope|eleven, Xrono is intended to be a core technology for smooth operation of consultancies. Xrono allows team members to bill time against clients, and then admins to easily export invoices and payroll into their accounting systems. Beyond that, it has vacation time management, overtime, client access and notification, and many more features. Xrono is currently under 
-    %a{:href => "https://github.com/isotope11/xrono", :target => "_blank"} active development
+    = link_to 'active development', 'https://github.com/isotope11/xrono', :target => '_blank'
     , so feel free to check out our support section if you have any questions.
     
   %p
-    %a{:href => "/community"}
-      Back to Community 
+    = link_to 'Back to Community', '/community'
 .clear
 
 

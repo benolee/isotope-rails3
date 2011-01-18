@@ -5,7 +5,7 @@
   %h2{:class => "typeface-js"}
     Services 
 .work_content_right
-  %img{:src => "/images/mlm.png", :alt => "work thumb"}
+  = image_tag '/images/mlm.png', :alt => 'MLM Image'
   %h4 MLM 
   .clear
   %ul
@@ -23,8 +23,7 @@
   %p
     We have a complete multi-level marketing solution which has the following features: Accounts, upline direct and generation based payments and bonuses, integration with third party vendors, points and position systems with full up and down line calculations, administrative and representative based reporting, replicated websites, editable marketing and video based training, genealogy reporting.  
   %p
-    %a{:href => "/services"}
-      Back to Services
+    = link_to 'Back to Services', '/services'
 .clear
 .work_examples
   = image_tag 'buyerunited.png'
