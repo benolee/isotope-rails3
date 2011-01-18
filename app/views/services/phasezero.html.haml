@@ -5,7 +5,7 @@
   %h2{:class => "typeface-js"}
     Services 
 .work_content_right
-  %img{:src => "/images/phase_zero.png", :alt => "work thumb"} 
+  = image_tag '/images/phase_zero.png', :alt => 'Phase Zero Image'
   %h4 Phase Zero 
   .clear
   %ul 
@@ -24,8 +24,7 @@
     Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project. Before coding ever begins, we create a realistic specification to guide your technological development. Through a series of short, intense sessions we build user stories and mockups for your entire application. This keeps development costs down, and encourages the entire development process to remain agile.
     
   %p
-    %a{:href => "/services"}
-      Back to Services
+    = link_to 'Back to Services', '/services'
 .clear
 
 

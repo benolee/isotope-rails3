@@ -10,70 +10,55 @@
         .feature
           .feature_title
             %h3
-              %a{:href => "services/phasezero"}
-                Phase Zero
+              = link_to 'Phase Zero', 'services/phasezero'
             = image_tag 'feature_phasezero.png'
-          %a{:href => "services/phasezero"}
-            Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project...
+          = link_to 'Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project...', 'services/phasezero'
+
         .feature
           .feature_title
             %h3
-              %a{:href => "services/ecommerce"}
-                E-commerce
+              = link_to 'E-commerce', 'services/ecommerce'
             = image_tag 'feature_ecom.png'
-          %a{:href => "services/ecommerce"}
-            Ready to get your business online, and move beyond a basic webpage?...
+          = link_to 'Ready to get your business online, and move beyond a basic webpage?...', 'services/ecommerce'
         .feature
           .feature_title
             %h3
-              %a{:href => "services/socialmedia"}
-                Social Media
+              = link_to 'Social Media', 'services/socialmedia'
             = image_tag 'feature_social.png'
-          %a{:href => "services/socialmedia"}
-            Social Media is all the buzz, work with a team that knows the ins and outs of the business...
+          = link_to  'Social Media is all the buzz, work with a team that knows the ins and outs of the business...', 'services/socialmedia'
         .feature-last
           .feature_title
             %h3
-              %a{:href => "services/mlm"}
-                MLM
+              = link_to 'MLM', 'services/mlm'
             = image_tag 'feature_mlm.png', :class => 'mlm'
-          %a{:href => "services/mlm"}
-            Need multi-level marketing? We have the complete solution...
+          = link_to 'Need multi-level marketing? We have the complete solution...', 'services/mlm'
     .clear
     #project_slider_bottom
       .feature-wrap
         .feature
           .feature_title
             %h3 
-              %a{:href => "services/financial"}
-                Financial
+              = link_to 'Financial', 'services/financial'
             = image_tag 'feature_financial.png'
-          %a{:href => "services/financial"}
-            Having architected, developed, and maintained one of the largest Ruby based financial applications in the world...
+          = link_to 'Having architected, developed, and maintained one of the largest Ruby based financial applications in the world...', 'services/financial'
         .feature
           .feature_title
             %h3 
-              %a{:href => "services/insurance"}
-                Insurance
+              = link_to 'Insurance', 'services/insurance'
             = image_tag 'feature_insurance.png'
-          %a{:href => "services/insurance"}
-            Many factors go into formulating a successful and accurate insurance quote... 
+          = link_to 'Many factors go into formulating a successful and accurate insurance quote...', 'services/insurance' 
         .feature
           .feature_title
             %h3 
-              %a{:href => "services/mobile"}
-                Mobile
+              = link_to 'Mobile', 'services/mobile'
             = image_tag 'feature_mobile.png'
-          %a{:href => "services/mobile"} 
-            Good mobile applications are much more than a basic functioning iPhone app... 
+          = link_to 'Good mobile applications are much more than a basic functioning iPhone app...', 'services/mobile' 
         .feature-last
           .feature_title
             %h3
-              %a{:href => "services/saas"}
-                SaaS
+              = link_to 'SaaS', 'services/saas'
             = image_tag 'feature_saas.png'
-          %a{:href => "services/saas" } 
-            Software as a service isn't just about re-occurring revenue... 
+          = link_to 'Software as a service isn\'t just about re-occurring revenue...', 'services/saas'
     
     <!--content featured gallery here -->
     <script type="text/javascript">

@@ -9,42 +9,30 @@
 %hr
 
 .work_services_wrap
-  %a{:href => "/community/xrono", :class => "services_link"}
-    Xrono 
+  = link_to 'Xrono', '/community/xrono', :class => 'services_link'
   .work_services_img
-    %a{:href => "/community/xrono"}
-      = image_tag 'feature_xrono.png'
+    = link_to(image_tag('feature_xrono.png'), '/community/xrono') 
   .work_services_text
     %h4{:class => "typeface-js"}
-      %a{:href => "/community/xrono"}
-        Xrono 
-    %a{:href => "/community/xrono"}
-      Track your companies time and profitability with our open source project, Xrono  
+      = link_to 'Xrono', '/community/xrono'
+    = link_to 'Track your companies time and profitability with our open source project, Xrono', '/community/xrono'  
 
 .work_services_wrap
-  %a{:href => "/community/rubyham", :class => "services_link"}
-    RubyHam 
+  = link_to 'RubyHam', '/community/rubyham', :class => 'services_link'
   .work_services_img
-    %a{:href => "/community/rubyham"}
-      = image_tag 'feature_rubyham.png'
+    = link_to(image_tag('feature_rubyham.png'), '/community/rubyham')
   .work_services_text  
-    %h4{:class => "typeface-js"} 
-      %a{:href => "/community/rubyham"}
-        RubyHam 
-    %a{:href => "/community/rubyham"}
-      Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area. 
+    %h4{:class => "typeface-js"}
+      = link_to 'RubyHam', '/community/rubyham'
+    = link_to 'Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area.', '/community/rubyham' 
 
 .work_services_wrap
-  %a{:href => "/community/state_machine_audits", :class => "services_link"}
-    state_machine_audits
+  = link_to 'state_machine_audits', '/community/state_machine_audits', :class => 'services_link'
   .work_services_img
-    %a{:href => "/community/state_machine_audits"}
-      = image_tag 'feature_saas.png'
+    = link_to(image_tag('feature_saas.png'), '/community/state_machine_audits')
   .work_services_text  
-    %h4{:class => "typeface-js"} 
-      %a{:href => "/community/state_machine_audits"}
-        state_machine_audits
-    %a{:href => "/services/state_machine_audits"}
-      Software as a Service isn't just about recurring revenue... 
+    %h4{:class => "typeface-js"}
+      = link_to 'state_machine_audits', '/community/state_machine_audits'
+    = link_to 'is a gem intended to be used in conjunction with the state_machine gem...', '/community/state_machine_audits' 
 
 .clear
