@@ -1,3 +1,4 @@
+- content_for(:title, "#{@post.title} &ndash; Blog &ndash; Isotope|eleven".html_safe)
 = render :partial => @post
 %p
   = link_to "View All Posts", posts_path
