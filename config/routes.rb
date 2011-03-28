@@ -25,6 +25,7 @@ IsotopeRails3::Application.routes.draw do
   match '/community/xrono' => 'community#xrono'
   match '/community/rubyham' => 'community#rubyham'
   match '/community/state_machine_audits' => 'community#state_machine_audits'
+  match '/community/techbirmingham' => 'community#techbirmingham'
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
