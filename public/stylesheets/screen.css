@@ -974,14 +974,9 @@ a.content_link {
 
 .footer-content3 {
   float:right;
-  margin: 5px 130px 0 0;
+  margin: 5px 124px 0 0;
 }
 
-.footer-content3 img {
--moz-box-shadow: 3px 3px 4px #aeaeae;
--webkit-box-shadow: 3px 3px 4px #aeaeae;
-box-shadow: 3px 3px 4px #aeaeae;
-}
 
 /*-----------------------------------------------mad lib form--------------------------------------------------------------*/
 
