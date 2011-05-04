@@ -10,3 +10,4 @@ public/system/**/*
 public/stylesheets/compiled/*
 .rvmrc
 tmp/**/*
+vendor/ruby
