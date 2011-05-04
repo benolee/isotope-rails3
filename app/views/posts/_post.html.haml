@@ -11,4 +11,4 @@
           = post.created_at.to_formatted_s(:long_ordinal)
       .clear
     .blog_content
-      = post.body.html_safe
+      =coderay(post.body.html_safe)
