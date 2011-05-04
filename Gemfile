@@ -8,6 +8,7 @@ gem 'haml', '~> 3.1.1'
 gem 'sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'coderay', '~> 0.9.7'
+gem 'capistrano'
 
 group :test do
   gem 'cucumber-rails'
